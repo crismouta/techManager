@@ -24,8 +24,12 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/events', function () {
-  return view('events.index');
-});
+/*Route::get('/events', function () {
+ return view('events.index');
+});*/
 
 Route::get('/events', [EventController::class, 'index']);
+
+Route::get('/events/first', [EventController::class, 'eventSelector']);
+Route::get('/events/btnCRUD', [EventController::class, 'btnCRUD']);
+

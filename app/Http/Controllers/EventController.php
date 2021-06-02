@@ -21,8 +21,28 @@ class EventController extends Controller
         return view('events.index', ['events' => $events]);
     }
 
+    public function eventSelector()
+
+{
+
+    $event1 = Event::all()[0];
+    //dd($event1);
+
+    return view('events.first', ['event1' => $event1]);
+
     
 
+}
+
+    public function btnCRUD()
+{
+    $events = Event::all();
+    //dd($events);
+
+    return view('events.btnCRUD', ['events' => $events]);
+}
+
+   
     /**
      * Show the form for creating a new resource.
      *
