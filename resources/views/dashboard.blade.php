@@ -5,6 +5,9 @@
         </h2>
     </x-slot>
     <div class="py-12">
+      <div class="flex justify-end pb-4 max-w-7xl">
+        <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">create event</button>
+        </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 
@@ -18,7 +21,7 @@
           <thead class="bg-gray-50">
             <tr>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Title
+                Events
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Description
@@ -71,7 +74,9 @@
           @endforeach
             
         </table>
-        {{$events->links()}}
+        <div class="flex justify-center pt-4">
+          {{$events->links()}}
+        </div>
       </div>
     </div>
   </div>

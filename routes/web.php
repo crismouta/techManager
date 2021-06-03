@@ -31,3 +31,6 @@ require __DIR__.'/auth.php';
 
 Route::get('/events/first', [EventController::class, 'eventSelector']);
 
+
+Route::get('/events/create', [EventController::class, 'create']);
+
