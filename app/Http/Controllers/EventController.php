@@ -15,14 +15,30 @@ class EventController extends Controller
     public function index()
     {
       
-        $events = Event::paginate(10);
-       // dd($events);
+       
+    $events = Event::paginate(5);
+    //dd($events);
 
-        return view('dashboard', ['events' => $events]);
+    return view('dashboard', ['events' => $events]);
     }
 
     
 
+    public function eventSelector()
+
+{
+
+    $event1 = Event::all()[0];
+    //dd($event1);
+
+    return view('events.first', ['event1' => $event1]);
+
+    
+
+}
+
+
+   
     /**
      * Show the form for creating a new resource.
      *
