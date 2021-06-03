@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            <em>{{ __('Lore')}}</em><em>meets</em>&nbsp;&nbsp;{{('Tech Events') }}
+            <em>{{ __('Lore')}}meets</em>&nbsp;&nbsp;{{('Tech Events') }}
         </h2>
     </x-slot>
     <!-- component -->
