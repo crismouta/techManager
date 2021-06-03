@@ -87,9 +87,12 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit($id)
+
     {
-        return view('events.edit');
+        $event = Event::findOrFail($id);
+
+        return view('events.edit', compact('event'));
     }
 
     /**
@@ -99,9 +102,14 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, $id)
     {
-        //
+        $changesEvent = request()->except(['_token', '_method']);
+        Event::where('id', '=', $id)->update($changesEvent);
+
+        //$event = Event::findOrFail($id);
+        return redirect('dashboard');
+        //return view('dashboard', compact('event'));
     }
 
     /**
