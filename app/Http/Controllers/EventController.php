@@ -15,11 +15,14 @@ class EventController extends Controller
     public function index()
     {
       
-        $events = Event::all();
-       // dd($events);
+       
+    $events = Event::paginate(5);
+    //dd($events);
 
-        return view('events.index', ['events' => $events]);
+    return view('dashboard', ['events' => $events]);
     }
+
+    
 
     public function eventSelector()
 
@@ -34,13 +37,6 @@ class EventController extends Controller
 
 }
 
-    public function btnCRUD()
-{
-    $events = Event::all();
-    //dd($events);
-
-    return view('events.btnCRUD', ['events' => $events]);
-}
 
    
     /**
