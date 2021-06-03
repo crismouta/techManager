@@ -170,7 +170,7 @@
         $("#sButton2").removeClass("bg-green-400");
         $("#sButton4").addClass("bg-green-400");
         reinitLoop(4000);
-        cont=2
+        cont=3
 
         }
 
