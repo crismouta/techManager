@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Events CRUD') }}
+            {{ __('Our Tech Events') }}
         </h2>
     </x-slot>
     <!-- component -->
@@ -16,8 +16,8 @@ function loopSlider(){
         case 0:{
             $("#slider-1").fadeOut(400);
             $("#slider-2").delay(400).fadeIn(400);
-            $("#sButton1").removeClass("bg-purple-800");
-            $("#sButton2").addClass("bg-purple-800");
+            $("#sButton1").removeClass("bg-green-400");
+            $("#sButton2").addClass("bg-green-400");
         cont=1;
         
         break;
@@ -27,8 +27,8 @@ function loopSlider(){
         
             $("#slider-2").fadeOut(400);
             $("#slider-1").delay(400).fadeIn(400);
-            $("#sButton2").removeClass("bg-purple-800");
-            $("#sButton1").addClass("bg-purple-800");
+            $("#sButton2").removeClass("bg-green-400");
+            $("#sButton1").addClass("bg-green-400");
            
         cont=0;
         
@@ -51,8 +51,8 @@ function sliderButton1(){
 
     $("#slider-2").fadeOut(400);
     $("#slider-1").delay(400).fadeIn(400);
-    $("#sButton2").removeClass("bg-purple-800");
-    $("#sButton1").addClass("bg-purple-800");
+    $("#sButton2").removeClass("bg-green-400");
+    $("#sButton1").addClass("bg-green-400");
     reinitLoop(4000);
     cont=0
     
@@ -61,8 +61,8 @@ function sliderButton1(){
     function sliderButton2(){
     $("#slider-1").fadeOut(400);
     $("#slider-2").delay(400).fadeIn(400);
-    $("#sButton1").removeClass("bg-purple-800");
-    $("#sButton2").addClass("bg-purple-800");
+    $("#sButton1").removeClass("bg-green-400");
+    $("#sButton2").addClass("bg-green-400");
     reinitLoop(4000);
     cont=1
     
@@ -70,7 +70,7 @@ function sliderButton1(){
 
     $(window).ready(function(){
         $("#slider-2").hide();
-        $("#sButton1").addClass("bg-purple-800");
+        $("#sButton1").addClass("bg-green-400");
         
 
         loopSlider();
@@ -91,10 +91,10 @@ function sliderButton1(){
       <div id="slider-1" class="container mx-auto">
         <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
        <div class="md:w-1/2">
-        <p class="font-bold text-sm uppercase">Services</p>
-        <p class="text-3xl font-bold">Hello world</p>
-        <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p>
-        <a href="#" class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Contact us</a>
+        <p class="font-bold text-sm uppercase">Workshop</p>
+        <p class="text-3xl font-bold">Laravel 8 for Begginers</p>
+        <p class="text-2xl mb-10 leading-none">Life is CRUD(e)</p>
+        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
         </div>  
     </div> <!-- container -->
       <br>
@@ -103,18 +103,18 @@ function sliderButton1(){
       <div id="slider-2" class="container mx-auto">
         <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80); background-position: bottom;">
        
-  <p class="font-bold text-sm uppercase">Services</p>
-        <p class="text-3xl font-bold">Hello world</p>
-        <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p>
-        <a href="#" class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Contact us</a>
+  <p class="font-bold text-sm uppercase">Webinar</p>
+        <p class="text-3xl font-bold">Break into Web Development</p>
+        <p class="text-2xl mb-10 leading-none">How to get started as a web developer and build solid apps</p>
+        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
          
     </div> <!-- container -->
       <br>
       </div>
     </div>
  <div  class="flex justify-between w-12 mx-auto pb-2">
-        <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 " ></button>
-    <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
+        <button id="sButton1" onclick="sliderButton1()" class="bg-green-300 rounded-full w-4 pb-2 " ></button>
+    <button id="sButton2" onclick="sliderButton2() " class="bg-green-300 rounded-full w-4 p-2"></button>
   </div>
 
 </body>
@@ -123,7 +123,7 @@ function sliderButton1(){
     <div class="py-12">
       <div class="flex justify-end pb-4 max-w-7xl">
       <a href="{{url('/events/create')}}">
-      <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">create event</button>
+      <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">New event</button>
 
       </a>
         </div>
@@ -140,7 +140,7 @@ function sliderButton1(){
           <thead class="bg-gray-50">
             <tr>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Events
+                Event
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Description
@@ -169,7 +169,7 @@ function sliderButton1(){
                 </div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-900">Laravel 8 for beginners</div>
+                <div class="text-sm text-gray-900">Laravel 8 for Beginners</div>
                 <div class="text-sm text-gray-500">Life is CRUD(e)</div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
