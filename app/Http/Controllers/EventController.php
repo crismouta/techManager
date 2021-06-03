@@ -15,10 +15,10 @@ class EventController extends Controller
     public function index()
     {
       
-        $events = Event::all();
+        $events = Event::paginate(10);
        // dd($events);
 
-        return view('events.index', ['events' => $events]);
+        return view('dashboard', ['events' => $events]);
     }
 
     

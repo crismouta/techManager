@@ -18,14 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [EventController::class, 'index'])->name('dashboard');
+
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard', [EventController::class, 'index']);
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
-Route::get('/events', function () {
-  return view('events.index');
-});
+// Route::get('/events', function () {
+//   return view('events.index');
+// });
 
-Route::get('/events', [EventController::class, 'index']);
+// Route::get('/events', [EventController::class, 'index']);

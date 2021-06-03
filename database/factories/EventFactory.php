@@ -23,6 +23,8 @@ class EventFactory extends Factory
     {
         return [
             'title' => $this->faker->company(),
+            'user_id' => 1
+
         ];
     }
 }
