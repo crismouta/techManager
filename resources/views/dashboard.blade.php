@@ -6,7 +6,10 @@
     </x-slot>
     <div class="py-12">
       <div class="flex justify-end pb-4 max-w-7xl">
-        <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">create event</button>
+      <a href="{{url('/events/create')}}">
+      <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">create event</button>
+
+      </a>
         </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
