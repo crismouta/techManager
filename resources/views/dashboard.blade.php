@@ -181,7 +181,7 @@ function sliderButton1(){
                 28/09/2021 - 19/10/2021
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                <a href="{{url('/events/edit')}}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
