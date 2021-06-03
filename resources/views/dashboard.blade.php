@@ -14,6 +14,7 @@
         switch(cont)
         {
         case 0:{
+            $("#slider-5").fadeOut(400);
             $("#slider-4").fadeOut(400);
             $("#slider-3").fadeOut(400);
             $("#slider-1").fadeOut(400);
@@ -26,12 +27,13 @@
         }
         case 1:
         {
+            $("#slider-5").fadeOut(400);
             $("#slider-4").fadeOut(400);
             $("#slider-3").fadeOut(400);
             $("#slider-2").fadeOut(400);
             $("#slider-1").delay(400).fadeIn(400);
             $("#sButton2").removeClass("bg-green-400");
-            $("#sButton3").addClass("bg-green-400");
+            $("#sButton1").addClass("bg-green-400");
             
         cont=0;
 
@@ -39,6 +41,7 @@
         }
         case 2:
         {
+            $("#slider-5").fadeOut(400);
             $("#slider-4").fadeOut(400);
             $("#slider-1").fadeOut(400);
             $("#slider-2").fadeOut(400);
@@ -52,6 +55,7 @@
         }
         case 3:
         {
+            $("#slider-5").fadeOut(400);
             $("#slider-3").fadeOut(400);
             $("#slider-2").fadeOut(400);
             $("#slider-1").fadeOut(400);
@@ -60,6 +64,35 @@
             $("#sButton4").addClass("bg-green-400");
             
         cont=4;
+
+        break;
+        }
+        case 4:
+        {
+            $("#slider-4").fadeOut(400);
+            $("#slider-3").fadeOut(400);
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").fadeOut(400);
+            $("#slider-5").delay(400).fadeIn(400);
+            $("#sButton4").removeClass("bg-green-400");
+            $("#sButton5").addClass("bg-green-400");
+            
+        cont=5;
+
+        break;
+        }
+        case 5:
+        {
+            $("#slider-5").fadeOut(400);
+            $("#slider-4").fadeOut(400);
+            $("#slider-3").fadeOut(400);
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton5").removeClass("bg-green-400");
+            $("#sButton1").addClass("bg-green-400");
+            
+        cont=1;
 
         break;
         }
@@ -77,11 +110,12 @@
 
 
         function sliderButton1(){
-        
+        $("#slider-5").fadeOut(400);
         $("#slider-4").fadeOut(400);
         $("#slider-3").fadeOut(400);
         $("#slider-2").fadeOut(400);
         $("#slider-1").delay(400).fadeIn(400);
+        $("#sButton5").removeClass("bg-green-400");
         $("#sButton2").removeClass("bg-green-400");
         $("#sButton3").removeClass("bg-green-400");
         $("#sButton4").removeClass("bg-green-400");
@@ -92,10 +126,12 @@
         }
 
         function sliderButton2(){
+        $("#slider-5").fadeOut(400);
         $("#slider-4").fadeOut(400);
         $("#slider-3").fadeOut(400);
         $("#slider-1").fadeOut(400);
         $("#slider-2").delay(400).fadeIn(400);
+        $("#sButton5").removeClass("bg-green-400");
         $("#sButton1").removeClass("bg-green-400");
         $("#sButton3").removeClass("bg-green-400");
         $("#sButton4").removeClass("bg-green-400");
@@ -106,11 +142,13 @@
         }
 
         function sliderButton3(){
+        $("#slider-5").fadeOut(400);
         $("#slider-4").fadeOut(400);
         $("#slider-3").fadeOut(400);
         $("#slider-2").fadeOut(400);
         $("#slider-1").fadeOut(400);
         $("#slider-3").delay(400).fadeIn(400);
+        $("#sButton5").removeClass("bg-green-400");
         $("#sButton1").removeClass("bg-green-400");
         $("#sButton2").removeClass("bg-green-400");
         $("#sButton4").removeClass("bg-green-400");
@@ -121,10 +159,12 @@
         }
 
         function sliderButton4(){
+        $("#slider-5").fadeOut(400);
         $("#slider-2").fadeOut(400);
         $("#slider-1").fadeOut(400);
         $("#slider-3").fadeOut(400);
         $("#slider-4").delay(400).fadeIn(400);
+        $("#sButton5").removeClass("bg-green-400");
         $("#sButton3").removeClass("bg-green-400");
         $("#sButton1").removeClass("bg-green-400");
         $("#sButton2").removeClass("bg-green-400");
@@ -134,7 +174,25 @@
 
         }
 
+        function sliderButton5(){
+        $("#slider-4").fadeOut(400);
+        $("#slider-2").fadeOut(400);
+        $("#slider-1").fadeOut(400);
+        $("#slider-3").fadeOut(400);
+        $("#slider-5").delay(400).fadeIn(400);
+        $("#sButton4").removeClass("bg-green-400");
+        $("#sButton3").removeClass("bg-green-400");
+        $("#sButton1").removeClass("bg-green-400");
+        $("#sButton2").removeClass("bg-green-400");
+        $("#sButton5").addClass("bg-green-400");
+        reinitLoop(4000);
+        cont=4
+
+        }
+
+        
         $(window).ready(function(){
+        $("#slider-5").hide();
         $("#slider-4").hide();
         $("#slider-3").hide();
         $("#slider-2").hide();
@@ -209,6 +267,18 @@
         <br>
         </div>
 
+        <div id="slider-5" class="container mx-auto">
+        <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://elporteno.cl/wp-content/uploads/2020/07/Antonio-Gramsci.jpg)">
+        <div class="md:w-1/2">
+        <p class="font-bold text-sm uppercase">Aquelarre</p>
+        <p class="text-3xl font-bold">Populism: a defense</p>
+        <p class="text-2xl mb-10 leading-none">Why all politicians should be populists</p>
+        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
+        </div>  
+        </div> <!-- container -->
+        <br>
+        </div>
+
         
 
         </div>
@@ -218,6 +288,7 @@
                 <button id="sButton2" onclick="sliderButton2() " class="bg-green-300 rounded-full w-4 p-2"></button>
                 <button id="sButton3" onclick="sliderButton3() " class="bg-green-300 rounded-full w-4 p-2"></button>
                 <button id="sButton4" onclick="sliderButton4() " class="bg-green-300 rounded-full w-4 p-2"></button>
+                <button id="sButton5" onclick="sliderButton5() " class="bg-green-300 rounded-full w-4 p-2"></button>
             </div>
         </div>
 
