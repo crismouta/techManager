@@ -37,3 +37,5 @@ Route::post('/events', [EventController::class, 'store']);
 
 
 Route::get('events/edit', [EventController::class, 'edit']);
+
+Route::delete('events/{id}', [EventController::class, 'destroy']);
