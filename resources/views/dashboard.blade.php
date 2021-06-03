@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Our Tech Events') }}
+            <em>{{ __('Lore')}}</em><em>meets</em>&nbsp;&nbsp;{{('Tech Events') }}
         </h2>
     </x-slot>
     <!-- component -->
@@ -193,15 +193,20 @@ function sliderButton1(){
           @endforeach
             
         </table>
-        <div class="flex justify-center pt-4">
-          {{$events->links()}}
-        </div>
+        
       </div>
+      
     </div>
+    
   </div>
   
 </div>
+
             </div>
+        </div>
+
+        <div class="flex justify-center pt-8">
+          {{$events->links()}}
         </div>
     </div>
 </x-app-layout>
