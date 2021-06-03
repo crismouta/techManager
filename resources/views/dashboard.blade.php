@@ -121,7 +121,7 @@ function sliderButton1(){
 
 </body>
     <div class="py-12">
-      <div class="flex justify-end pb-4 max-w-7xl">
+      <div class="flex justify-end pb-8 max-w-7xl">
       <a href="{{url('/events/create')}}">
       <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">New event</button>
 
