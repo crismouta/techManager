@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Create a New Event') }}
+            {{ __('Edit Event') }}
         </h2>
     </x-slot>
 
@@ -20,7 +20,7 @@
 
                             <div class="flex justify-center">
                             <div class="flex">
-                                <h1 class="text-gray-600 font-bold md:text-2xl text-xl">New Event Form</h1>
+                                <h1 class="text-gray-600 font-bold md:text-2xl text-xl">Edit Event Form</h1>
                             </div>
                             </div>
 
@@ -69,7 +69,7 @@
 
                             <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
                                 <button class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Cancel</button>
-                                <button class='w-auto bg-green-400 hover:bg-green-300 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Create</button>
+                                <button class='w-auto bg-green-400 hover:bg-green-300 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Save</button>
                             </div>
 
                         </div>

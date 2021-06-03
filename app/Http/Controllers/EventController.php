@@ -57,7 +57,17 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newEvent = request()->except('_token');
+
+        /* if($request->hasFile('photo'))
+        {
+            $newEvent['photo']=$request->file('photo')->store('uploads', public'); ¡Ojo! Aquí no hay carpeta uploads en store-public
+        } */
+        Event::insert($newEvent);
+        //return response()->json($newEvent);
+        $events = Event::paginate(40);
+
+        return view('dashboard', ['events' => $events]);
     }
 
     /**

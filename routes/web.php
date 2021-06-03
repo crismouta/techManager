@@ -33,6 +33,7 @@ Route::get('/events/first', [EventController::class, 'eventSelector']);
 
 
 Route::get('/events/create', [EventController::class, 'create']);
+Route::post('/events', [EventController::class, 'store']);
 
 
 Route::get('events/edit', [EventController::class, 'edit']);
