@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -76,9 +77,10 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show($id)
     {
-        //
+        $event = Event::findOrFail($id);
+        return view('events.show', compact('event'));
     }
 
     /**
@@ -105,6 +107,19 @@ class EventController extends Controller
     public function update(Request $request, $id)
     {
         $changesEvent = request()->except(['_token', '_method']);
+
+        /* if($request->hasFile('photo'))
+            {
+
+            $event=Event::findOrFail($id);
+
+            Storage::delete('public/'.$event->photo);
+
+            $newEvent['photo']=$request->file('photo')->store('uploads', public'); ¡Ojo! Aquí no hay carpeta uploads en storage-public
+            
+            } 
+        */
+
         Event::where('id', '=', $id)->update($changesEvent);
 
         //$event = Event::findOrFail($id);

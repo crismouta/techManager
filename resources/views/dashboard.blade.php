@@ -161,10 +161,10 @@ function sliderButton1(){
               <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
                 <div class="flex-shrink-0 h-10 w-10">
-                    <img class="h-10 w-10 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhBHeVDXhLvIS4Ls5PnvDo3CCwhAd8ScJ0_w&usqp=CAU" alt="">
+                    <img class="h-10 w-10 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhBHeVDXhLvIS4Ls5PnvDo3CCwhAd8ScJ0_w&usqp=CAU" alt=""> <!-- <img src="{{asset('storage').'/'.$event->photo}}"> Seguido del comando en terminal: php artisan storage:link  // Copiar y pegar el <img> en el edit.blade para que aparezca -->
                   </div>
                   <div class="ml-4">
-                  <a href="#" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
+                  <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
                   </div>
                 </div>
               </td>

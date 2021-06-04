@@ -40,4 +40,7 @@ Route::get('events/edit/{id}', [EventController::class, 'edit']);
 
 Route::delete('events/{id}', [EventController::class, 'destroy']);
 
+
 Route::patch('/events/edit/{id}', [EventController::class, 'update']);
+
+Route::get('events/show/{id}', [EventController::class, 'show']);
