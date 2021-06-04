@@ -354,11 +354,19 @@
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 28/09/2021 - 19/10/2021
+<<<<<<< HEAD
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+=======
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <a href="{{url('/events/edit')}}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+>>>>>>> 0fb353cf40b2a58fcc8785e9e5550697ee37872d
                 <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
                 </td>
                 
