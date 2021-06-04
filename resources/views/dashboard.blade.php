@@ -20,6 +20,9 @@
             $("#slider-1").fadeOut(400);
             $("#slider-2").delay(400).fadeIn(400);
             $("#sButton1").removeClass("bg-green-400");
+            $("#sButton3").removeClass("bg-green-400");
+            $("#sButton4").removeClass("bg-green-400");
+            $("#sButton5").removeClass("bg-green-400");
             $("#sButton2").addClass("bg-green-400");
         cont=2;
 
@@ -33,6 +36,9 @@
             $("#slider-2").fadeOut(400);
             $("#slider-1").delay(400).fadeIn(400);
             $("#sButton2").removeClass("bg-green-400");
+            $("#sButton3").removeClass("bg-green-400");
+            $("#sButton4").removeClass("bg-green-400");
+            $("#sButton5").removeClass("bg-green-400");
             $("#sButton1").addClass("bg-green-400");
             
         cont=0;
@@ -46,7 +52,10 @@
             $("#slider-1").fadeOut(400);
             $("#slider-2").fadeOut(400);
             $("#slider-3").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-green-400");
             $("#sButton2").removeClass("bg-green-400");
+            $("#sButton4").removeClass("bg-green-400");
+            $("#sButton5").removeClass("bg-green-400");
             $("#sButton3").addClass("bg-green-400");
             
         cont=3;
@@ -60,7 +69,10 @@
             $("#slider-2").fadeOut(400);
             $("#slider-1").fadeOut(400);
             $("#slider-4").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-green-400");
+            $("#sButton2").removeClass("bg-green-400");
             $("#sButton3").removeClass("bg-green-400");
+            $("#sButton5").removeClass("bg-green-400");
             $("#sButton4").addClass("bg-green-400");
             
         cont=4;
@@ -74,6 +86,9 @@
             $("#slider-2").fadeOut(400);
             $("#slider-1").fadeOut(400);
             $("#slider-5").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-green-400");
+            $("#sButton2").removeClass("bg-green-400");
+            $("#sButton3").removeClass("bg-green-400");
             $("#sButton4").removeClass("bg-green-400");
             $("#sButton5").addClass("bg-green-400");
             
@@ -89,6 +104,9 @@
             $("#slider-2").fadeOut(400);
             $("#slider-1").fadeOut(400);
             $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("bg-green-400");
+            $("#sButton3").removeClass("bg-green-400");
+            $("#sButton4").removeClass("bg-green-400");
             $("#sButton5").removeClass("bg-green-400");
             $("#sButton1").addClass("bg-green-400");
             
@@ -354,19 +372,11 @@
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 28/09/2021 - 19/10/2021
-<<<<<<< HEAD
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-=======
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <a href="{{url('/events/edit')}}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
->>>>>>> 0fb353cf40b2a58fcc8785e9e5550697ee37872d
                 <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
                 </td>
                 
