@@ -23,6 +23,8 @@ class EventFactory extends Factory
     {
         return [
             'title' => $this->faker->company(),
+            'description' => $this->faker->name(),
+           /* 'image' => $this->faker->image(),  */
             'user_id' => 1
 
         ];

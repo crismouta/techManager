@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create(['name' => 'root', 'email' => 'root@root.com']);
         User::factory(10)->create();
-        Event::factory(30)->create();
+        Event::factory(30)->create(['capacity' => 20]);
     }
 }

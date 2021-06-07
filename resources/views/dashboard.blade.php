@@ -336,7 +336,7 @@
                 <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
                 <div class="flex-shrink-0 h-10 w-10">
-                    <img class="h-10 w-10 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhBHeVDXhLvIS4Ls5PnvDo3CCwhAd8ScJ0_w&usqp=CAU" alt=""> <!-- <img src="{{asset('storage').'/'.$event->photo}}"> Seguido del comando en terminal: php artisan storage:link  // Copiar y pegar el <img> en el edit.blade para que aparezca -->
+                    <img class="h-10 w-10 rounded-full" src="{{asset('storage').'/'.$event->picture}}" alt=""> <!-- <img src="{{asset('storage').'/'.$event->photo}}"> Seguido del comando en terminal: php artisan storage:link  // Copiar y pegar el <img> en el edit.blade para que aparezca -->
                   </div>
                   <div class="ml-4">
                   <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
@@ -345,11 +345,11 @@
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">Laravel 8 for Beginners</div>
-                <div class="text-sm text-gray-500">Life is CRUD(e)</div>
+                <div class="text-sm text-gray-500">{{$event->description}}</div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                    12/20
+                    {{$event->capacity}}
                 </span>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">

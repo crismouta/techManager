@@ -12,7 +12,7 @@
                     
 
                     @foreach ($events as $event)
-                    <li>{{$event->title}} </li>
+                    <li>{{$event->title  - $event->description }} </li>
                     
                     @endforeach
                     
