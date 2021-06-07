@@ -19,7 +19,7 @@ class CreateEventsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');
             $table->string('description');
-            //$table->string('image');
+            $table->string('image')->nullable();
             $table->integer('capacity');
             $table->timestamps();
         });

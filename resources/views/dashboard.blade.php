@@ -335,8 +335,8 @@
             <tr>@foreach ($events as $event)
                 <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
-                <div class="flex-shrink-0 h-10 w-10">
-                    <img class="h-10 w-10 rounded-full" src="{{asset('storage').'/'.$event->picture}}" alt=""> <!-- <img src="{{asset('storage').'/'.$event->photo}}"> Seguido del comando en terminal: php artisan storage:link  // Copiar y pegar el <img> en el edit.blade para que aparezca -->
+                <div class="flex-shrink-0 h-10 w-20">
+                    <img class="h-10 w-20" src="{{asset('storage/img').'/'.$event->image}}" alt=""> <!-- <img src="{{asset('storage').'/'.$event->photo}}"> Seguido del comando en terminal: php artisan storage:link  // Copiar y pegar el <img> en el edit.blade para que aparezca -->
                   </div>
                   <div class="ml-4">
                   <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
@@ -348,8 +348,8 @@
                 <div class="text-sm text-gray-500">{{$event->description}}</div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                    {{$event->capacity}}
+                <span class="px-2 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
+                    5 / {{$event->capacity}}
                 </span>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
