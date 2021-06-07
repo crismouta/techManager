@@ -15,8 +15,10 @@
 
 <img src="https://www.logoinspirations.co/wp-content/uploads/2018/11/hand-logo-22.jpg" {{ $attributes }}>
  --}}
- <div>
-     <img src="<?php echo asset('storage\app\public\image\logo.png')?>"
-     alt="">
- </div>
+<figure class="absolute inset-y-0 right-10" >
+
+    <img style="width:45%" src="<?php echo asset('storage\image\logo.png' )?>"
+    alt="">
+</figure>
+
 
