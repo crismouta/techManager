@@ -336,7 +336,7 @@
                 <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
                 <div class="flex-shrink-0 h-10 w-20">
-                    <img class="h-10 w-20" src="{{$event->image}}" alt=""> <!-- <img src="{{asset('storage').'/'.$event->photo}}"> Seguido del comando en terminal: php artisan storage:link  // Copiar y pegar el <img> en el edit.blade para que aparezca -->
+                    <img class="h-10 w-20" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
                   </div>
                   <div class="ml-4">
                   <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>

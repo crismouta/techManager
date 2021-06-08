@@ -63,7 +63,7 @@ class EventController extends Controller
 
          if($request->hasFile('image'))
         {
-            $newEvent['image']=$request->file('image')->store('image', 'public');
+            $newEvent['image']=$request->file('image')->store('img', 'public');
         }
         Event::insert($newEvent);
         //return response()->json($newEvent);
@@ -109,17 +109,18 @@ class EventController extends Controller
     {
         $changesEvent = request()->except(['_token', '_method']);
 
-        /* if($request->hasFile('photo'))
+        if($request->hasFile('image'))
             {
 
             $event=Event::findOrFail($id);
 
-            Storage::delete('public/'.$event->photo);
+            Storage::delete('public/'.$event->image);
 
-            $newEvent['photo']=$request->file('photo')->store('uploads', public'); ¡Ojo! Aquí no hay carpeta uploads en storage-public
+            $newEvent['image']=$request->file('image')->store('img', 'public');
+            
 
             }
-        */
+        
 
         Event::where('id', '=', $id)->update($changesEvent);
 
