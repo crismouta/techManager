@@ -47,7 +47,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        
+
         return view('events.create');
     }
 
@@ -61,10 +61,10 @@ class EventController extends Controller
     {
         $newEvent = request()->except('_token');
 
-        /* if($request->hasFile('photo'))
+         if($request->hasFile('image'))
         {
-            $newEvent['photo']=$request->file('photo')->store('uploads', public'); ¡Ojo! Aquí no hay carpeta uploads en store-public
-        } */
+            $newEvent['image']=$request->file('image')->store('image', 'public');
+        }
         Event::insert($newEvent);
         //return response()->json($newEvent);
         $events = Event::paginate(40);
