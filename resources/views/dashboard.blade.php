@@ -34,7 +34,7 @@
             $("#slider-1").delay(400).fadeIn(400);
             $("#sButton2").removeClass("bg-green-400");
             $("#sButton1").addClass("bg-green-400");
-            
+
         cont=0;
 
         break;
@@ -48,7 +48,7 @@
             $("#slider-3").delay(400).fadeIn(400);
             $("#sButton2").removeClass("bg-green-400");
             $("#sButton3").addClass("bg-green-400");
-            
+
         cont=3;
 
         break;
@@ -62,7 +62,7 @@
             $("#slider-4").delay(400).fadeIn(400);
             $("#sButton3").removeClass("bg-green-400");
             $("#sButton4").addClass("bg-green-400");
-            
+
         cont=4;
 
         break;
@@ -76,7 +76,7 @@
             $("#slider-5").delay(400).fadeIn(400);
             $("#sButton4").removeClass("bg-green-400");
             $("#sButton5").addClass("bg-green-400");
-            
+
         cont=5;
 
         break;
@@ -91,7 +91,7 @@
             $("#slider-1").delay(400).fadeIn(400);
             $("#sButton5").removeClass("bg-green-400");
             $("#sButton1").addClass("bg-green-400");
-            
+
         cont=1;
 
         break;
@@ -190,7 +190,7 @@
 
         }
 
-        
+
         $(window).ready(function(){
         $("#slider-5").hide();
         $("#slider-4").hide();
@@ -222,7 +222,7 @@
         <p class="text-3xl font-bold">Women in technology</p>
         <p class="text-2xl mb-10 leading-none">A case for positive discrimination</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-            
+
         </div> <!-- container -->
         <br>
         </div>
@@ -235,7 +235,7 @@
         <p class="text-3xl font-bold">Agile mindset: nobody expects the Spanish inquisition</p>
         <p class="text-2xl mb-10 leading-none">How to become friends with adversity</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-            
+
         </div> <!-- container -->
         <br>
         </div>
@@ -248,7 +248,7 @@
         <p class="text-3xl font-bold">Break into Web Development</p>
         <p class="text-2xl mb-10 leading-none">How to get started as a web developer and build solid apps</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-            
+
         </div> <!-- container -->
         <br>
         </div>
@@ -262,7 +262,7 @@
         <p class="text-3xl font-bold">Laravel 8 for Begginers</p>
         <p class="text-2xl mb-10 leading-none">Life is CRUD(e)</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-        </div>  
+        </div>
         </div> <!-- container -->
         <br>
         </div>
@@ -274,12 +274,12 @@
         <p class="text-3xl font-bold">Populism: a defense</p>
         <p class="text-2xl mb-10 leading-none">Why all politicians should be populists</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-        </div>  
+        </div>
         </div> <!-- container -->
         <br>
         </div>
 
-        
+
 
         </div>
         <div  class="flex justify-center w-12 mx-auto pb-2">
@@ -304,9 +304,9 @@
         </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                
 
-                
+
+
         <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -356,24 +356,24 @@
                 28/09/2021 - 19/10/2021
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-             
+
                 <a href="{{url('/events/edit/'.$event->id)}}" class="bg-white text-indigo-600 hover:text-indigo-900">Edit</a>
-            
+
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <form action="{{ url('/events/'.$event->id)}}" method="post">
                 @csrf
                 {{method_field('DELETE')}}
-                  <input type="submit" class="bg-white text-red-600 hover:text-red-900" 
+                  <input type="submit" class="bg-white text-red-600 hover:text-red-900"
                   onclick="return confirm('Are you sure you want to permanently remove this item?')" value="Delete">
                 </form>
               </td>
-              
+
             </tr>
-            
+
             </tbody>
             @endforeach
-            
+
         </table>
 
         </div>
