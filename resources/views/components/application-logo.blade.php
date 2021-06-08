@@ -17,7 +17,7 @@
  -->
 
  <div >
-     <img style="width:45%" src="<?php echo asset('storage/img/logo.png')?>"
+     <img style="width:45%" src="<?php echo asset('storage/image/logo.png')?>"
      alt="">
  </div>
 
