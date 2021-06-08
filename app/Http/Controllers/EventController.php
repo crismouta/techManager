@@ -47,7 +47,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        
+
         return view('events.create');
     }
 
@@ -59,6 +59,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        
         $newEvent = request()->except('_token');
 
         /* if($request->hasFile('photo'))

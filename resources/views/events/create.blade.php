@@ -52,7 +52,7 @@
 
                             <div class="grid grid-cols-1 mt-5 mx-7">
                                 <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Description</label>
-                                <textarea rows="6" class="py-2 px-3 rounded-lg border-2 border-green-400 mt-1 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
+                                <textarea rows="6" class="py-2 px-3 rounded-lg border-2 border-green-400 mt-1 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" name="description" id="description" ></textarea>
                             </div>
 
                             <div class="grid grid-cols-1 mt-5 mx-7">
