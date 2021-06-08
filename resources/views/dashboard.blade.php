@@ -34,7 +34,7 @@
             $("#slider-1").delay(400).fadeIn(400);
             $("#sButton2").removeClass("bg-green-400");
             $("#sButton1").addClass("bg-green-400");
-            
+
         cont=0;
 
         break;
@@ -48,7 +48,7 @@
             $("#slider-3").delay(400).fadeIn(400);
             $("#sButton2").removeClass("bg-green-400");
             $("#sButton3").addClass("bg-green-400");
-            
+
         cont=3;
 
         break;
@@ -62,7 +62,7 @@
             $("#slider-4").delay(400).fadeIn(400);
             $("#sButton3").removeClass("bg-green-400");
             $("#sButton4").addClass("bg-green-400");
-            
+
         cont=4;
 
         break;
@@ -76,7 +76,7 @@
             $("#slider-5").delay(400).fadeIn(400);
             $("#sButton4").removeClass("bg-green-400");
             $("#sButton5").addClass("bg-green-400");
-            
+
         cont=5;
 
         break;
@@ -91,7 +91,7 @@
             $("#slider-1").delay(400).fadeIn(400);
             $("#sButton5").removeClass("bg-green-400");
             $("#sButton1").addClass("bg-green-400");
-            
+
         cont=1;
 
         break;
@@ -190,7 +190,7 @@
 
         }
 
-        
+
         $(window).ready(function(){
         $("#slider-5").hide();
         $("#slider-4").hide();
@@ -222,7 +222,7 @@
         <p class="text-3xl font-bold">Women in technology</p>
         <p class="text-2xl mb-10 leading-none">A case for positive discrimination</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-            
+
         </div> <!-- container -->
         <br>
         </div>
@@ -235,7 +235,7 @@
         <p class="text-3xl font-bold">Agile mindset: nobody expects the Spanish inquisition</p>
         <p class="text-2xl mb-10 leading-none">How to become friends with adversity</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-            
+
         </div> <!-- container -->
         <br>
         </div>
@@ -248,7 +248,7 @@
         <p class="text-3xl font-bold">Break into Web Development</p>
         <p class="text-2xl mb-10 leading-none">How to get started as a web developer and build solid apps</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-            
+
         </div> <!-- container -->
         <br>
         </div>
@@ -262,7 +262,7 @@
         <p class="text-3xl font-bold">Laravel 8 for Begginers</p>
         <p class="text-2xl mb-10 leading-none">Life is CRUD(e)</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-        </div>  
+        </div>
         </div> <!-- container -->
         <br>
         </div>
@@ -274,12 +274,12 @@
         <p class="text-3xl font-bold">Populism: a defense</p>
         <p class="text-2xl mb-10 leading-none">Why all politicians should be populists</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-        </div>  
+        </div>
         </div> <!-- container -->
         <br>
         </div>
 
-        
+
 
         </div>
         <div  class="flex justify-center w-12 mx-auto pb-2">
@@ -304,9 +304,9 @@
         </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                
 
-                
+
+
         <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -335,8 +335,8 @@
             <tr>@foreach ($events as $event)
                 <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
-                <div class="flex-shrink-0 h-10 w-10">
-                    <img class="h-10 w-10 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhBHeVDXhLvIS4Ls5PnvDo3CCwhAd8ScJ0_w&usqp=CAU" alt=""> <!-- <img src="{{asset('storage').'/'.$event->photo}}"> Seguido del comando en terminal: php artisan storage:link  // Copiar y pegar el <img> en el edit.blade para que aparezca -->
+                <div class="flex-shrink-0 h-10 w-20">
+                    <img class="h-10 w-20" src="{{asset('storage/img').'/'.$event->image}}" alt=""> <!-- <img src="{{asset('storage').'/'.$event->photo}}"> Seguido del comando en terminal: php artisan storage:link  // Copiar y pegar el <img> en el edit.blade para que aparezca -->
                   </div>
                   <div class="ml-4">
                   <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
@@ -345,35 +345,35 @@
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">Laravel 8 for Beginners</div>
-                <div class="text-sm text-gray-500">Life is CRUD(e)</div>
+                <div class="text-sm text-gray-500">{{$event->description}}</div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                    12/20
+                <span class="px-2 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
+                    5 / {{$event->capacity}}
                 </span>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 28/09/2021 - 19/10/2021
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-             
+
                 <a href="{{url('/events/edit/'.$event->id)}}" class="bg-white text-indigo-600 hover:text-indigo-900">Edit</a>
-            
+
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <form action="{{ url('/events/'.$event->id)}}" method="post">
                 @csrf
                 {{method_field('DELETE')}}
-                  <input type="submit" class="bg-white text-red-600 hover:text-red-900" 
+                  <input type="submit" class="bg-white text-red-600 hover:text-red-900"
                   onclick="return confirm('Are you sure you want to permanently remove this item?')" value="Delete">
                 </form>
               </td>
-              
+
             </tr>
-            
+
             </tbody>
             @endforeach
-            
+
         </table>
 
         </div>

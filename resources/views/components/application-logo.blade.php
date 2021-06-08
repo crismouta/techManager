@@ -1,4 +1,4 @@
-{{--
+
 
 <!-- <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" {{ $attributes }} x="0px" y="0px"
 	 viewBox="0 0 640 480" style="enable-background:new 0 0 640 480;" xml:space="preserve">
@@ -13,12 +13,11 @@
 
 <img src="logo.svg" alt="" {{$attributes}} >  -->
 
-<img src="https://www.logoinspirations.co/wp-content/uploads/2018/11/hand-logo-22.jpg" {{ $attributes }}>
- --}}
-<figure class="absolute inset-y-0 right-10" >
+<!-- <img src="https://www.logoinspirations.co/wp-content/uploads/2018/11/hand-logo-22.jpg" {{ $attributes }}>
+ -->
 
-    <img style="width:45%" src="<?php echo asset('storage\image\logo.png' )?>"
-    alt="">
-</figure>
-
+ <div >
+     <img style="width:45%" src="<?php echo asset('storage/img/logo.png')?>"
+     alt="">
+ </div>
 

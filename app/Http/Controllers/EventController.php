@@ -15,15 +15,15 @@ class EventController extends Controller
      */
     public function index()
     {
-      
-       
+
+
     $events = Event::paginate(5);
     //dd($events);
 
     return view('dashboard', ['events' => $events]);
     }
 
-    
+
 
     public function eventSelector()
 
@@ -34,12 +34,12 @@ class EventController extends Controller
 
     return view('events.first', ['event1' => $event1]);
 
-    
+
 
 }
 
 
-   
+
     /**
      * Show the form for creating a new resource.
      *
@@ -116,8 +116,8 @@ class EventController extends Controller
             Storage::delete('public/'.$event->photo);
 
             $newEvent['photo']=$request->file('photo')->store('uploads', public'); ¡Ojo! Aquí no hay carpeta uploads en storage-public
-            
-            } 
+
+            }
         */
 
         Event::where('id', '=', $id)->update($changesEvent);
