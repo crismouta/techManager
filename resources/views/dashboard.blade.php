@@ -222,7 +222,7 @@
         <p class="text-3xl font-bold">Women in technology</p>
         <p class="text-2xl mb-10 leading-none">A case for positive discrimination</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
-
+        <!-- ETIQUETA CON SHOW DE EVENTOS FALTA BIGOTITIOS   <a href="url ('/events/show/'.$event->id)" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a> -->
         </div> <!-- container -->
         <br>
         </div>
@@ -336,7 +336,9 @@
                 <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
                 <div class="flex-shrink-0 h-10 w-20">
-                    <img class="h-10 w-20" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
+                <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
+                <img class="h-10 w-20" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
+                </a>
                   </div>
                   <div class="ml-4">
                   <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
