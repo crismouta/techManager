@@ -14,10 +14,10 @@
 <img src="logo.svg" alt="" {{$attributes}} >  -->
 
 <!-- <img src="https://www.logoinspirations.co/wp-content/uploads/2018/11/hand-logo-22.jpg" {{ $attributes }}>
- -->
+-->
 
- <div >
-     <img style="width:45%" src="<?php echo asset('storage/image/logo.png')?>"
-     alt="">
- </div>
+<div >
+    <img style="width:45%" src="<?php echo asset('storage/img/logo.png')?>"
+    alt="">
+</div>
 

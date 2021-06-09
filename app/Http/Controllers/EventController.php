@@ -113,9 +113,7 @@ class EventController extends Controller
             {
 
             $event=Event::findOrFail($id);
-
             Storage::delete('public/'.$event->image);
-
             $newEvent['image']=$request->file('image')->store('img', 'public');
             
 
