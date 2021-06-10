@@ -358,14 +358,14 @@
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
 
-                <a href="{{url('/events/edit/'.$event->id)}}" class="bg-white text-indigo-600 hover:text-indigo-900">Edit</a>
+                <a href="{{url('/events/edit/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Edit</a>
 
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <form action="{{ url('/events/'.$event->id)}}" method="post">
                 @csrf
                 {{method_field('DELETE')}}
-                  <input type="submit" class="bg-white text-red-600 hover:text-red-900"
+                  <input type="submit" class="border border-red-500 text-red-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-red-600 focus:outline-none focus:shadow-outline"
                   onclick="return confirm('Are you sure you want to permanently remove this item?')" value="Delete">
                 </form>
               </td>

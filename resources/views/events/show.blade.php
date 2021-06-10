@@ -69,7 +69,7 @@
                     Author
                   </p>
                   <p class="text-xs font-light tracking-wider text-gray-600">
-                    2 Hours ago
+                    08/12/2021
                   </p>
                 </div>
               </div>
