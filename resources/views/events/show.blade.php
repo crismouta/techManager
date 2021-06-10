@@ -64,12 +64,12 @@
             
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-               <!-- <form action="{{ url('/events/'.$event->id)}}" method="post">
+               <form action="{{ url('/events/'.$event->id)}}" method="post">
                 @csrf
                 {{method_field('DELETE')}}
                   <input type="submit" class="bg-white text-red-600 hover:text-red-900" 
                   onclick="return confirm('Are you sure you want to permanently remove this item?')" value="Delete">
-                </form>-->
+                </form>
               </td>
               
             </tr>
