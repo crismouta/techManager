@@ -221,7 +221,7 @@
         <p class="font-bold text-sm uppercase">TedTalk</p>
         <p class="text-3xl font-bold">Women in technologys</p>
         <p class="text-2xl mb-10 leading-none">A case for positive discrimination</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
+        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
         <!-- ETIQUETA CON SHOW DE EVENTOS FALTA BIGOTITIOS   <a href="url ('/events/show/'.$event->id)" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a> -->
         </div> <!-- container -->
         <br>
@@ -234,7 +234,7 @@
         <p class="font-bold text-sm uppercase">Masterclass</p>
         <p class="text-3xl font-bold">Agile mindset: nobody expects the Spanish inquisition</p>
         <p class="text-2xl mb-10 leading-none">How to become friends with adversity</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
+        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
 
         </div> <!-- container -->
         <br>
@@ -247,7 +247,7 @@
         <p class="font-bold text-sm uppercase">Webinar</p>
         <p class="text-3xl font-bold">Break into Web Development</p>
         <p class="text-2xl mb-10 leading-none">How to get started as a web developer and build solid apps</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
+        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
 
         </div> <!-- container -->
         <br>
@@ -261,7 +261,7 @@
         <p class="font-bold text-sm uppercase">Workshop</p>
         <p class="text-3xl font-bold">Laravel 8 for Begginers</p>
         <p class="text-2xl mb-10 leading-none">Life is CRUD(e)</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
+        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
         </div>
         </div> <!-- container -->
         <br>
@@ -273,7 +273,7 @@
         <p class="font-bold text-sm uppercase">Aquelarre</p>
         <p class="text-3xl font-bold">Populism: a defense</p>
         <p class="text-2xl mb-10 leading-none">Why all politicians should be populists</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
+        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
         </div>
         </div> <!-- container -->
         <br>
@@ -297,10 +297,10 @@
         </body>
         <div class="py-12">
         <div class="flex justify-end pb-8 max-w-7xl">
-        <a href="{{url('/events/create')}}">
+        {{-- <a href="{{url('/events/create')}}">
         <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">New event</button>
 
-        </a>
+        </a> --}}
         </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -314,7 +314,7 @@
         <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
             <tr>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th scope="col" class="px-6 my-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Event
                 </th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -346,7 +346,6 @@
                 </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-900">Laravel 8 for Beginners</div>
                 <div class="text-sm text-gray-500">{{$event->description}}</div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
