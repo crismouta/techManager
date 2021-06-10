@@ -335,7 +335,7 @@
             <tr>@foreach ($events as $event)
                 <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
-                <div class="flex-shrink-0 h-10 w-20">
+                <div class="fnew eve-0 h-10 w-20">
                 <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
                 <img class="h-10 w-20" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
                 </a>
