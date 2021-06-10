@@ -21,6 +21,18 @@ class EventController extends Controller
     //dd($events);
 
     return view('dashboard', ['events' => $events]);
+    
+    }
+
+    public function welcome()
+    {
+
+
+    $events = Event::paginate(10);
+    //dd($events);
+
+    
+    return view('welcome', ['events' => $events]);
     }
 
 
