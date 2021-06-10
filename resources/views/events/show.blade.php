@@ -7,7 +7,7 @@
 
     <!-- component -->
 <div class="flex justify-between m-6">
-  <div class="flex flex-col h-full max-w-lg mx-auto bg-green-100 rounded-lg">
+  <div class="flex flex-col h-full w-4/5 mx-auto bg-green-100 rounded-lg">
           <img
             class="rounded-lg rounded-b-none"
             src="{{ asset('storage').'/'.$event->image}}"
@@ -16,14 +16,28 @@
           />
           <div class="flex justify-between -mt-4 px-4">
             <span
-              class="inline-block ring-4 bg-green-600 ring-gray-800 text-sm font-medium tracking-wide text-gray-100 px-3 pt-0.5"
-              >TED Talk</span
-            >
+              class="inline-block ring-4 bg-green-500 ring-gray-800 rounded-sm text-sm font-medium tracking-wide text-gray-100 px-3 pt-0.5"
+              >TED Talk</span>
+
             <span
-              class="flex h-min space-x-1 items-center rounded-full text-gray-400 bg-gray-800 py-1 px-2 text-xs font-medium"
-            >
+              class="flex h-min space-x-1 items-center rounded-full text-gray-400 bg-gray-800 py-1 px-2 text-xs font-medium">
+
+              <!--<svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-blue-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>-->
               
-              <p class="text-blue-500 font-semibold text-xs">
+              <p class="text-gren-500 font-semibold text-xs">
                 5 / {{$event->capacity}}
               </p>
             </span>
@@ -45,7 +59,7 @@
                 class="flex items-center space-x-3 border-r border-gray-700 w-full"
               >
                 <img
-                  class="object-cover w-8 h-8 border-2 border-white rounded-sm"
+                  class="object-cover h-14 w-14 h-8 border-2 border-white rounded-full"
                   src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-9/48367594_2254870701505746_1892060332294144000_n.png?_nc_cat=110&ccb=1-3&_nc_sid=973b4a&_nc_ohc=RTQYj1zVyXUAX9P_14R&_nc_ht=scontent-mad1-1.xx&oh=911d3d8bc253e459c5460962a04e66b3&oe=60E8458A"
                   alt="profile users"
                   loading="lazy"
@@ -61,7 +75,7 @@
               </div>
               <div class="flex items-center flex-shrink-0 px-2">
                 <div class="flex items-center space-x-1 text-gray-400">
-                  <a href="{{url('/events/edit/'.$event->id)}}" class="bg-white text-indigo-600 hover:text-indigo-900">Edit</a>
+                  <a href="{{url('/events/edit/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Edit</a>
                 </div>
               </div>
             </div>
