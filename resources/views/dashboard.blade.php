@@ -302,7 +302,7 @@
 
         </a> --}}
         </div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-2">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
 
 
@@ -314,7 +314,7 @@
         <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
             <tr>
-                <th scope="col" class="px-6 my-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Event
                 </th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -333,11 +333,11 @@
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
             <tr>@foreach ($events as $event)
-                <td class="px-6 py-4 whitespace-nowrap">
-                <div class="flex items-center">
-                <div class="fnew eve-0 h-10 w-20">
+                <td class="px-6 py-4 whitespace-wrap w-92">
+                <div class="flex items-center w-92">
+                <div class="flex-shrink-0 h-16 w-32">
                 <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
-                <img class="h-10 w-20" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
+                <img class="h-16 w-32" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
                 </a>
                   </div>
                   <div class="ml-4">
@@ -345,30 +345,23 @@
                   </div>
                 </div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-4 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-500">{{$event->description}}</div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
+                <td class="px-4 py-4 whitespace-nowrap">
+                <span class="px-4 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
                     5 / {{$event->capacity}}
                 </span>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
                 28/09/2021 - 19/10/2021
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
 
-                <a href="{{url('/events/edit/'.$event->id)}}" class="bg-white text-indigo-600 hover:text-indigo-900">Edit</a>
+                <a href="{{url('/events/edit/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
 
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <form action="{{ url('/events/'.$event->id)}}" method="post">
-                @csrf
-                {{method_field('DELETE')}}
-                  <input type="submit" class="bg-white text-red-600 hover:text-red-900"
-                  onclick="return confirm('Are you sure you want to permanently remove this item?')" value="Delete">
-                </form>
-              </td>
+              
 
             </tr>
 
