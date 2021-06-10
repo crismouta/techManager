@@ -219,13 +219,13 @@
         <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://femtech2019.files.wordpress.com/2019/01/women-in-tech.jpg?w=1137); background-position: center;">
 
         <p class="font-bold text-sm uppercase">TedTalk</p>
-        <p class="text-3xl font-bold">Women in technology</p>
+        <p class="text-3xl font-bold">Women in technologys</p>
         <p class="text-2xl mb-10 leading-none">A case for positive discrimination</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a>
         <!-- ETIQUETA CON SHOW DE EVENTOS FALTA BIGOTITIOS   <a href="url ('/events/show/'.$event->id)" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a> -->
         </div> <!-- container -->
         <br>
-        </div>
+        </div> 
 
 
         <div id="slider-2" class="container mx-auto">
