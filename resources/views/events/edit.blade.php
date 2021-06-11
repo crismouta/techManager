@@ -61,14 +61,16 @@
                                 <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold mb-1">Upload Photo</label>
                                 <div class='flex items-center justify-center w-full'>
                                     <label class='flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-100 hover:border-green-400 group'>
-                                        <div class='flex flex-col items-center justify-center pt-7'>
+                                    @if($event->image)
+                                        
+                                        <div class='flex flex-col items-center justify-center align-center pt-7'>
+                                        <img src="{{ asset('storage').'/'.$event->image }}" width="120" alt="">
+                                        @endif
                                             <svg class="w-10 h-10 text-green-300 group-hover:text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                                             <p class='lowercase text-sm text-gray-400 group-hover:text-green-500 pt-1 tracking-wider'>Select a photo</p>
                                         </div>
 
-                                        @if($event->image)
-                                        <img src="{{ asset('storage').'/'.$event->image }}" width="100" alt="">
-                                        @endif
+                                        
 
                                     <input type='file' class="hidden" name="image" value="image" id="image"/>  
                                     </label>
