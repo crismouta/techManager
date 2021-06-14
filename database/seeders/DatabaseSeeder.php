@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        User::factory()->create(['name' => 'root', 'email' => 'root@root.com']);
+        User::factory()->create(['name' => 'admin', 'email' => 'admin@admin.com', 'isAdmin'=>true]);
+        User::factory()->create(['name' => 'user', 'email' => 'user@user.com']);
         User::factory(10)->create();
         Event::factory()->create(['title' => 'Women in technology', 'description' => 'A case for positive discrimination', 'image'=>'img/women-in-tech.jpg', 'capacity'=>'12']); 
         Event::factory()->create(['title' => 'Agile mindset nobody expects the Spanish inquisition', 'description' => 'How to become friends with adversity', 'image'=>'img/agile-mindset.jpg', 'capacity'=>'17']);
