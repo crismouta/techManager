@@ -29,18 +29,16 @@ require __DIR__.'/auth.php';
 
 
 
-Route::get('/events/first', [EventController::class, 'eventSelector']);
 
-
-Route::get('/events/create', [EventController::class, 'create']);
+Route::get('/events/createUser', [EventController::class, 'create']);
 Route::post('/events', [EventController::class, 'store']);
 
 
-Route::get('events/edit/{id}', [EventController::class, 'edit']);
+Route::get('events/editUser/{id}', [EventController::class, 'edit']);
 
 Route::delete('events/{id}', [EventController::class, 'destroy'])->name('destroy');
 
 
-Route::patch('/events/edit/{id}', [EventController::class, 'update']);
+Route::patch('/events/editUser/{id}', [EventController::class, 'update']);
 
-Route::get('events/show/{id}', [EventController::class, 'show']);
+Route::get('events/showUser/{id}', [EventController::class, 'show']);

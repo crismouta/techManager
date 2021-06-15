@@ -23,7 +23,7 @@
                                 <h1 class="text-gray-600 font-bold md:text-2xl text-xl">Edit Event Form</h1>
                             </div>
                             </div>
-                        <form action="{{ url('/events/edit/'.$event->id)}}" method="post" enctype="multipart/form-data">
+                        <form action="{{ url('/events/editUser/'.$event->id)}}" method="post" enctype="multipart/form-data">
                         @csrf
                         {{method_field('PATCH')}}
                             <div class="grid grid-cols-1 mt-5 mx-7">
