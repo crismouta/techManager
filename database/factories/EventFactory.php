@@ -25,7 +25,6 @@ class EventFactory extends Factory
             'title' => $this->faker->company(),
             'description' => $this->faker->name(),
             'image' => $this->faker->imageurl(640,480, null, false),  
-            'user_id' => 1,
             'capacity' => $this -> faker -> numberBetween($min = 5, $max = 30)
 
         ];

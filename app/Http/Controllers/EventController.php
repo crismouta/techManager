@@ -34,7 +34,7 @@ class EventController extends Controller
     public function create()
     {
 
-        return view('events.create');
+        return view('events.createUser');
     }
 
     /**
@@ -67,7 +67,11 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
+<<<<<<< HEAD
         return view('events.showAdmin', compact('event'));
+=======
+        return view('events.showUser', compact('event'));
+>>>>>>> 30e904341971c361782a650ab3cdac103870172d
     }
 
     /**
@@ -81,7 +85,7 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id);
 
-        return view('events.edit', compact('event'));
+        return view('events.editUser', compact('event'));
     }
 
     /**
