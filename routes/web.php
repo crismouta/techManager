@@ -30,23 +30,20 @@ require __DIR__.'/auth.php';
 
 
 
-<<<<<<< HEAD
-Route::get('/events/create', [EventController::class, 'create']);
-=======
-Route::get('/events/createUser', [EventController::class, 'create']);
->>>>>>> 30e904341971c361782a650ab3cdac103870172d
+Route::get('/events/createAdmin', [EventController::class, 'create']);
+// Route::get('/events/createUser', [EventController::class, 'create']);
 Route::post('/events', [EventController::class, 'store']);
 
+//realmente esto es para el habilitar el join, no el edit
+// Route::get('events/editUser/{id}', [EventController::class, 'edit']);
+Route::get('events/editAdmin/{id}', [EventController::class, 'edit']);
 
-Route::get('events/editUser/{id}', [EventController::class, 'edit']);
+
 
 Route::delete('events/{id}', [EventController::class, 'destroy'])->name('destroy');
 
 
-Route::patch('/events/editUser/{id}', [EventController::class, 'update']);
+Route::patch('/events/editAdmin/{id}', [EventController::class, 'update']);
 
-<<<<<<< HEAD
 Route::get('events/showAdmin/{id}', [EventController::class, 'show']);
-=======
-Route::get('events/showUser/{id}', [EventController::class, 'show']);
->>>>>>> 30e904341971c361782a650ab3cdac103870172d
+// Route::get('events/showUser/{id}', [EventController::class, 'show']);

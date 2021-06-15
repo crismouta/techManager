@@ -33,8 +33,8 @@ class EventController extends Controller
      */
     public function create()
     {
-
-        return view('events.createUser');
+        return view('events.createAdmin');
+        // return view('events.createUser');
     }
 
     /**
@@ -67,11 +67,8 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
-<<<<<<< HEAD
         return view('events.showAdmin', compact('event'));
-=======
-        return view('events.showUser', compact('event'));
->>>>>>> 30e904341971c361782a650ab3cdac103870172d
+        // return view('events.showUser', compact('event'));
     }
 
     /**
@@ -80,12 +77,22 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+
+    //esto servira para el join del user
+    public function join($id)
 
     {
         $event = Event::findOrFail($id);
 
         return view('events.editUser', compact('event'));
+    }
+
+    public function edit($id)
+
+    {
+        $event = Event::findOrFail($id);
+
+        return view('events.editAdmin', compact('event'));
     }
 
     /**

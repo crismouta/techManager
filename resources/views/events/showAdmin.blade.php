@@ -75,7 +75,7 @@
               </div>
               <div class="flex items-center flex-shrink-0 px-2">
                 <div class="flex items-center space-x-1 text-gray-400">
-                  <a href="{{url('/events/edit/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Edit</a>
+                  <a href="{{url('/events/editAdmin/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Edit</a>
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                <form action="{{ url('/events/edit/'.$event->id)}}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('/events/editAdmin/'.$event->id)}}" method="post" enctype="multipart/form-data">
                 <div class="flex flex-col">
   <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -139,7 +139,7 @@
               <!--Edit-->
               {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
              
-                <a href="{{url('/events/edit/'.$event->id)}}" class="bg-white text-indigo-600 hover:text-indigo-900">Edit</a>
+                <a href="{{url('/events/editAdmin/'.$event->id)}}" class="bg-white text-indigo-600 hover:text-indigo-900">Edit</a>
             
               </td> --}}
               {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
