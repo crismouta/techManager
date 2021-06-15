@@ -25,20 +25,6 @@ class EventController extends Controller
 
 
 
-    public function eventSelector()
-
-{
-
-    $event1 = Event::all()[0];
-    //dd($event1);
-
-    return view('events.first', ['event1' => $event1]);
-
-
-
-}
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -81,7 +67,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
-        return view('events.show', compact('event'));
+        return view('events.showAdmin', compact('event'));
     }
 
     /**

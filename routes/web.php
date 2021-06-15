@@ -29,8 +29,6 @@ require __DIR__.'/auth.php';
 
 
 
-Route::get('/events/first', [EventController::class, 'eventSelector']);
-
 
 Route::get('/events/create', [EventController::class, 'create']);
 Route::post('/events', [EventController::class, 'store']);
@@ -43,4 +41,4 @@ Route::delete('events/{id}', [EventController::class, 'destroy'])->name('destroy
 
 Route::patch('/events/edit/{id}', [EventController::class, 'update']);
 
-Route::get('events/show/{id}', [EventController::class, 'show']);
+Route::get('events/showAdmin/{id}', [EventController::class, 'show']);
