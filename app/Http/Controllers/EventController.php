@@ -5,9 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
 
 class EventController extends Controller
 {
+
+    public function __construct(){
+
+        $this->middleware('auth');
+
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -16,11 +26,16 @@ class EventController extends Controller
     public function index()
     {
 
-
     $events = Event::paginate(5);
-    //dd($events);
 
-    return view('dashboard', ['events' => $events]);
+    if(Auth::user()->isAdmin){
+
+        return view('dashboardAdmin', ['events' => $events]);
+        
+    }
+    //dd($events);
+        return view('home.index', ['events' => $events]);
+   
     }
 
 
@@ -66,9 +81,16 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        $event = Event::findOrFail($id);
-        return view('events.showAdmin', compact('event'));
-        // return view('events.showUser', compact('event'));
+        $events = Event::find($id);
+
+        if(Auth::user()->isAdmin){
+
+            return view('events.showAdmin', ['events' => $events]);
+            
+        }
+    
+            return view('events.showUser', ['events' => $events]);
+
     }
 
     /**
