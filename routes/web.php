@@ -48,8 +48,9 @@ Route::get('events/showAdmin/{id}', [EventController::class, 'show']);
 // Route::get('events/showUser/{id}', [EventController::class, 'show']);
 
 
+Route::get('/dashboard',[EventController::class, 'index'])->name('index_admin')->middleware((IsAdmin::class));
 
-Route::get('/admin/index',[EventController::class, 'index'])->name('index_admin')->middleware((IsAdmin::class));
+Route::get('/user/index',[EventController::class, 'index'])->name('index_user');
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
