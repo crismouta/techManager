@@ -85,11 +85,11 @@ class EventController extends Controller
 
         if(Auth::user()->isAdmin){
 
-            return view('admin.show',  compact('event'));
+            return view('admin.show',  ["events" => $event]);
 
         }
 
-            return view('user.show', compact('event'));
+            return view('user.show', ["events" => $event]);
 
     }
 
