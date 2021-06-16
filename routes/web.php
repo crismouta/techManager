@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,15 +15,15 @@ use App\Http\Controllers\EventController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-/* Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard'); */
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard'); 
 
-Route::get('/dashboard', [EventController::class, 'index'])->name('dashboard');
+// Route::get('/dashboard', [EventController::class, 'index'])->name('dashboard');
 
 
 require __DIR__.'/auth.php';
@@ -38,12 +39,17 @@ Route::post('/events', [EventController::class, 'store']);
 // Route::get('events/editUser/{id}', [EventController::class, 'edit']);
 Route::get('events/editAdmin/{id}', [EventController::class, 'edit']);
 
-
-
 Route::delete('events/{id}', [EventController::class, 'destroy'])->name('destroy');
-
 
 Route::patch('/events/editAdmin/{id}', [EventController::class, 'update']);
 
 Route::get('events/showAdmin/{id}', [EventController::class, 'show']);
 // Route::get('events/showUser/{id}', [EventController::class, 'show']);
+
+
+
+Route::get('/admin/index',[EventController::class, 'index'])->name('index_admin');
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/show/{id}', [HomeController::class, 'show'])->name('show_home');
