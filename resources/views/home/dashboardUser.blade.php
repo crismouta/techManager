@@ -337,17 +337,6 @@
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
             <tr>@foreach ($events as $event)
-<<<<<<< HEAD:resources/views/dashboard.blade.php
-                <td class="px-6 py-4 whitespace-wrap w-84">
-                <div class="flex items-center w-84">
-                <div class="flex-shrink-0 h-20 w-40">
-                <a href="{{url('/events/showAdmin/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
-                <img class="h-20 w-40" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
-                </a>
-                  </div>
-                  <div class="ml-4">
-                  <a href="{{url('/events/showAdmin/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
-=======
                 <td class="px-6 py-4 whitespace-wrap w-92">
                 <div class="flex items-center w-92">
                 <div class="flex-shrink-0 h-16 w-32">
@@ -357,7 +346,6 @@
                   </div>
                   <div class="ml-4">
                   <a href="{{url('/events/showUser/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
->>>>>>> 30e904341971c361782a650ab3cdac103870172d:resources/views/dashboardUser.blade.php
                   </div>
                 </div>
                 </td>
@@ -370,32 +358,14 @@
                 </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-<<<<<<< HEAD:resources/views/dashboard.blade.php
-                11/03/2021 
-=======
                 28/09/2021 - 19/10/2021
->>>>>>> 30e904341971c361782a650ab3cdac103870172d:resources/views/dashboardUser.blade.php
               </td>
               <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
-<<<<<<< HEAD:resources/views/dashboard.blade.php
-                <a href="{{url('/events/edit/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Edit</a>
-
-              </td>
-              <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <form action="{{ url('/events/'.$event->id)}}" method="post">
-                @csrf
-                {{method_field('DELETE')}}
-                  <input type="submit" class="bg-white border border-red-500 text-red-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-red-600 focus:outline-none focus:shadow-outline"
-                  onclick="return confirm('Are you sure you want to permanently remove this item?')" value="Delete">
-                </form>
-              </td>
-=======
                 <a href="{{url('/events/editUser/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
 
               </td>
               
->>>>>>> 30e904341971c361782a650ab3cdac103870172d:resources/views/dashboardUser.blade.php
 
             </tr>
 
