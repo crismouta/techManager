@@ -35,7 +35,7 @@ class EventController extends Controller
     }
     //dd($events);
         return view('user.index', ['events' => $events]);
-   
+
     }
 
 
@@ -62,7 +62,7 @@ class EventController extends Controller
     {
         $newEvent = request()->except('_token');
 
-         if($request->hasFile('image'))
+            if($request->hasFile('image'))
         {
             $newEvent['image']=$request->file('image')->store('img', 'public');
         }
