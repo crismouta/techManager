@@ -224,7 +224,7 @@
         @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                      @auth
-                       
+
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
 
@@ -245,7 +245,7 @@
         <!-- ETIQUETA CON SHOW DE EVENTOS FALTA BIGOTITIOS   <a href="url ('/events/show/'.$event->id)" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a> -->
         </div> <!-- container -->
         <br>
-        </div> 
+        </div>
 
 
         <div id="slider-2" class="container mx-auto">
@@ -359,12 +359,12 @@
                 <td class="px-6 py-4 whitespace-wrap w-92">
                 <div class="flex items-center w-92">
                 <div class="flex-shrink-0 h-16 w-32">
-                <a href="{{url('/user/showUser/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
-                <img class="h-16 w-32" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
+                <a href="{{url('/home/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
+                <img class="h-16 w-32" src="{{ asset('storage').'/'.$event->image}}" alt="">
                 </a>
                   </div>
                   <div class="ml-4">
-                  <a href="{{url('/user/showUser/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
+                  <a href="{{url('/home/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
                   </div>
                 </div>
                 </td>
@@ -384,7 +384,7 @@
                 <a href="{{url('/user/editUser/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
 
               </td>
-              
+
 
             </tr>
 
@@ -410,4 +410,3 @@
         </div>
         </x-app-layout>
 
-        
