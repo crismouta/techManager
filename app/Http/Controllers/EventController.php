@@ -30,7 +30,7 @@ class EventController extends Controller
 
     if(Auth::user()->isAdmin){
 
-        return view('admin.dashboard', ['events' => $events]);
+        return view('admin.index', ['events' => $events]);
         
     }
     //dd($events);
