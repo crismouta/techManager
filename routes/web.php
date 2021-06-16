@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
+use App\Http\Middleware\IsAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +49,9 @@ Route::get('events/showAdmin/{id}', [EventController::class, 'show']);
 
 
 
-Route::get('/admin/index',[EventController::class, 'index'])->name('index_admin')->middleware((isAdmin::class));
+Route::get('/dashboard',[EventController::class, 'index'])->name('index_admin')->middleware((IsAdmin::class));
+
+Route::get('/user/index',[EventController::class, 'index'])->name('index_user');
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');

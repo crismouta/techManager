@@ -22,7 +22,7 @@ class IsAdmin {
             return $next($request);
         }
 
-            return redirect()->route('/');
+            return redirect()->route('home');
             
 
     }

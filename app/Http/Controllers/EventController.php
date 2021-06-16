@@ -34,7 +34,7 @@ class EventController extends Controller
         
     }
     //dd($events);
-        return view('home.index', ['events' => $events]);
+        return view('user.index', ['events' => $events]);
    
     }
 
