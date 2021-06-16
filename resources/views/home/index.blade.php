@@ -1,4 +1,10 @@
-      
+
+      <!-- <button>
+      <a method='POST' href="{{ route('login') }}">
+      Login
+      </a>
+      </button> -->
+
         <x-app-layout>
         <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -215,6 +221,19 @@
 
         <body>
         <div class="sliderAx h-auto pt-4">
+        @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
 
         <div id="slider-1" class="container mx-auto">
         <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://femtech2019.files.wordpress.com/2019/01/women-in-tech.jpg?w=1137); background-position: center;">
@@ -298,7 +317,7 @@
         </body>
         <div class="py-12">
         <div class="flex justify-end pb-8 max-w-7xl">
-        {{-- <a href="{{url('/events/createUser')}}">
+        {{-- <a href="{{url('/user/createUser')}}">
         <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">New event</button>
 
         </a> --}}
@@ -340,12 +359,12 @@
                 <td class="px-6 py-4 whitespace-wrap w-92">
                 <div class="flex items-center w-92">
                 <div class="flex-shrink-0 h-16 w-32">
-                <a href="{{url('/events/showUser/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
+                <a href="{{url('/user/showUser/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
                 <img class="h-16 w-32" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
                 </a>
                   </div>
                   <div class="ml-4">
-                  <a href="{{url('/events/showUser/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
+                  <a href="{{url('/user/showUser/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
                   </div>
                 </div>
                 </td>
@@ -362,7 +381,7 @@
               </td>
               <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
-                <a href="{{url('/events/editUser/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
+                <a href="{{url('/user/editUser/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
 
               </td>
               
@@ -391,6 +410,4 @@
         </div>
         </x-app-layout>
 
-        @endif
-
-        <h1>Horchata<h1>
+        
