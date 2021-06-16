@@ -225,7 +225,7 @@
         <!-- ETIQUETA CON SHOW DE EVENTOS FALTA BIGOTITIOS   <a href="url ('/events/show/'.$event->id)" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a> -->
         </div> <!-- container -->
         <br>
-        </div> 
+        </div>
 
 
         <div id="slider-2" class="container mx-auto">
@@ -339,12 +339,12 @@
                 <td class="px-6 py-4 whitespace-wrap w-84">
                 <div class="flex items-center w-84">
                 <div class="flex-shrink-0 h-20 w-40">
-                <a href="{{url('/events/showAdmin/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
-                <img class="h-20 w-40" src="{{ asset('storage').'/'.$event->image}}" alt=""> 
+                <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
+                <img class="h-20 w-40" src="{{ asset('storage').'/'.$event->image}}" alt="">
                 </a>
                   </div>
                   <div class="ml-4">
-                  <a href="{{url('/events/showAdmin/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
+                  <a href="{{url('/events/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
                   </div>
                 </div>
                 </td>
@@ -357,7 +357,7 @@
                 </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                11/03/2021 
+                11/03/2021
               </td>
               <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 

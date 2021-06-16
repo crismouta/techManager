@@ -17,7 +17,7 @@ class EventController extends Controller
         $this->middleware('auth');
 
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -31,7 +31,7 @@ class EventController extends Controller
     if(Auth::user()->isAdmin){
 
         return view('admin.index', ['events' => $events]);
-        
+
     }
     //dd($events);
         return view('user.index', ['events' => $events]);
@@ -81,15 +81,15 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        $events = Event::find($id);
+        $event = Event::find($id);
 
         if(Auth::user()->isAdmin){
 
-            return view('events.showAdmin', ['events' => $events]);
-            
+            return view('admin.show',  compact('event'));
+
         }
-    
-            return view('events.showUser', ['events' => $events]);
+
+            return view('user.show', compact('event'));
 
     }
 
@@ -134,10 +134,10 @@ class EventController extends Controller
             $event=Event::findOrFail($id);
             Storage::delete('public/'.$event->image);
             $newEvent['image']=$request->file('image')->store('img', 'public');
-            
+
 
             }
-        
+
 
         Event::where('id', '=', $id)->update($changesEvent);
 
