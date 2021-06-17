@@ -70,7 +70,7 @@ class EventController extends Controller
         //return response()->json($newEvent);
         $events = Event::paginate(40);
 
-        return view('admin.index', ['events' => $events]);
+        return redirect()->route('logged_index');
     }
 
     /**
