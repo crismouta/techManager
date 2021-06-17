@@ -23,17 +23,17 @@ require __DIR__.'/auth.php';
 
 
 
-Route::get('/events/createAdmin', [EventController::class, 'create']);
+Route::get('/admin/create', [EventController::class, 'create'])->name('admin_create')->middleware(IsAdmin::class);
 // Route::get('/events/createUser', [EventController::class, 'create']);
-Route::post('/events', [EventController::class, 'store']);
+Route::post('/events', [EventController::class, 'store'])->name('store')->middleware(IsAdmin::class);
 
 //realmente esto es para el habilitar el join, no el edit
 // Route::get('events/editUser/{id}', [EventController::class, 'edit']);
-Route::get('events/editAdmin/{id}', [EventController::class, 'edit']);
+Route::get('/admin/edit/{id}', [EventController::class, 'edit'])->name('admin_edit')->middleware(IsAdmin::class);
 
-Route::delete('events/{id}', [EventController::class, 'destroy'])->name('destroy');
+Route::delete('events/{id}', [EventController::class, 'destroy'])->name('destroy')->middleware(IsAdmin::class);
 
-Route::patch('/events/editAdmin/{id}', [EventController::class, 'update']);
+Route::patch('/admin/edit/{id}', [EventController::class, 'update'])->name('update')->middleware(IsAdmin::class);
 
 
 
