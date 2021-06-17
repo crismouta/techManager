@@ -38,7 +38,7 @@ Route::patch('/events/editAdmin/{id}', [EventController::class, 'update']);
 
 
 
-Route::get('/index',[EventController::class, 'index'])->name('logged_index');
+    Route::get('/index',[EventController::class, 'index'])->name('logged_index');
 
 
 
