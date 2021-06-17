@@ -297,7 +297,7 @@
         </body>
         <div class="py-12">
         <div class="flex justify-end pb-8 max-w-7xl">
-        <a href="{{url('/events/createAdmin')}}">
+        <a href="{{url('/admin/create')}}">
         <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">New event</button>
 
         </a>
@@ -361,7 +361,7 @@
               </td>
               <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
-                <a href="{{url('/events/editAdmin/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Edit</a>
+                <a href="{{url('/admin/edit/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Edit</a>
 
               </td>
               <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">

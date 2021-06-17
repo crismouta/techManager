@@ -48,7 +48,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('events.createAdmin');
+        return view('admin.create');
         // return view('events.createUser');
     }
 
@@ -70,7 +70,7 @@ class EventController extends Controller
         //return response()->json($newEvent);
         $events = Event::paginate(40);
 
-        return view('dashboard', ['events' => $events]);
+        return view('admin.index', ['events' => $events]);
     }
 
     /**
@@ -114,7 +114,7 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id);
 
-        return view('events.editAdmin', compact('event'));
+        return view('admin.edit', compact('event'));
     }
 
     /**
@@ -142,7 +142,7 @@ class EventController extends Controller
         Event::where('id', '=', $id)->update($changesEvent);
 
         //$event = Event::findOrFail($id);
-        return redirect('dashboard');
+        return redirect()->route('logged_index');
         //return view('dashboard', compact('event'));
     }
 
@@ -155,6 +155,6 @@ class EventController extends Controller
     public function destroy($id)
     {
         Event::destroy($id);
-        return redirect('dashboard');
+        return redirect()->route('logged_index');
     }
 }
