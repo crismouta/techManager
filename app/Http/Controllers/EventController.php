@@ -62,7 +62,7 @@ class EventController extends Controller
     {
         $newEvent = request()->except('_token');
 
-         if($request->hasFile('image'))
+            if($request->hasFile('image'))
         {
             $newEvent['image']=$request->file('image')->store('img', 'public');
         }
@@ -70,7 +70,7 @@ class EventController extends Controller
         //return response()->json($newEvent);
         $events = Event::paginate(40);
 
-        return view('admin.index', ['events' => $events]);
+        return redirect()->route('logged_index');
     }
 
     /**
