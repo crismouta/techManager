@@ -378,11 +378,11 @@
                 </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                28/09/2021 - 19/10/2021
+                {{$event->date}}
               </td>
               <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
-                <a href="{{url('/user/editUser/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
+                <a href="{{url('/join/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
 
               </td>
 

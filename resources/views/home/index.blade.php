@@ -377,7 +377,7 @@
                 </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                28/09/2021 - 19/10/2021
+                {{$event->date}}
               </td>
               <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 

@@ -104,9 +104,12 @@ class EventController extends Controller
     public function join($id)
 
     {
-        $event = Event::findOrFail($id);
+        $loggedUser = Auth::user();
+        $event = Event::find($id);
+        $loggedUser->events()->attach($event->id);
+        
 
-        return view('events.editUser', compact('event'));
+        return redirect()->route('logged_index');
     }
 
     public function edit($id)
