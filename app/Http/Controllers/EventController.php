@@ -105,12 +105,14 @@ class EventController extends Controller
 
     {
         $loggedUserId = User::find(Auth::id());
+    
         $clickedEventId = Event::find($id);
 
         $loggedUserId->events()->attach($clickedEventId);
         
 
         return redirect()->route('logged_index');
+        
     }
 
     public function edit($id)
@@ -119,6 +121,13 @@ class EventController extends Controller
         $event = Event::findOrFail($id);
 
         return view('admin.edit', compact('event'));
+    }
+
+    public function myList(){
+
+        //buscar en la lista de los eventos aquellos id que coincidan con el id del evento del user loggeado.
+
+        
     }
 
     /**

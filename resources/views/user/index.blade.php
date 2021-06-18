@@ -281,7 +281,7 @@
         <div class="md:w-1/2">
         <p class="font-bold text-sm uppercase">Workshop</p>
         <p class="text-3xl font-bold">Laravel 8 for Begginers</p>
-        <p class="text-2xl mb-10 leading-none">Life is CRUD(e)</p>
+        <p class="text-2xl mb-10 leading-none">Life is so CRUD(e)</p>
         <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
         </div>
         </div> <!-- container -->
