@@ -47,7 +47,8 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {   
+      
         return view('admin.create');
         // return view('events.createUser');
     }
@@ -66,11 +67,12 @@ class EventController extends Controller
         {
             $newEvent['image']=$request->file('image')->store('img', 'public');
         }
-        Event::insert($newEvent);
+        Event::create($newEvent);
+        //Event::insert($newEvent);
         //return response()->json($newEvent);
         $events = Event::paginate(40);
-
-        return redirect()->route('logged_index');
+        
+        //return redirect()->route('logged_index');
     }
 
     /**
@@ -153,6 +155,7 @@ class EventController extends Controller
 
 
         Event::where('id', '=', $id)->update($changesEvent);
+       
 
         //$event = Event::findOrFail($id);
         return redirect()->route('logged_index');

@@ -1,5 +1,7 @@
 <?php
 
+
+
 return [
 
     /*
@@ -36,11 +38,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'host' => 'smtp.dondominio.com',
+            'port' => 587,
+            'encryption' => 'tls',
+            'username' => 'promociones@gastronomus.net',
+            'password' => 'Pr0m0s2021+',
             'timeout' => null,
             'auth_mode' => null,
         ],
