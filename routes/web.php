@@ -27,6 +27,10 @@ Route::get('/admin/create', [EventController::class, 'create'])->name('admin_cre
 // Route::get('/events/createUser', [EventController::class, 'create']);
 Route::post('/events', [EventController::class, 'store'])->name('store')->middleware(IsAdmin::class);
 
+Route::get('/admin/show/{id}', [EventController::class, 'show'])->name('admin_show')->middleware(IsAdmin::class);
+
+Route::delete('/admin/edit/{id}', [EventController::class, 'destroy'])->name('destroy')->middleware(IsAdmin::class);
+
 //realmente esto es para el habilitar el join, no el edit
 // Route::get('events/editUser/{id}', [EventController::class, 'edit']);
 Route::get('join/{id}', [EventController::class, 'join']);
