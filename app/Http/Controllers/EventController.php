@@ -87,11 +87,11 @@ class EventController extends Controller
 
         if(Auth::user()->isAdmin){
 
-            return view('admin.show',  ["events" => $event]);
+            return view('admin.show',  ["event" => $event]);
 
         }
 
-            return view('user.show', ["events" => $event]);
+            return view('user.show', ["event" => $event]);
 
     }
 
@@ -112,6 +112,7 @@ class EventController extends Controller
 
         $loggedUserId->events()->attach($clickedEventId);
         
+        session()->flash('message', 'Your application has been successfully submitted!');
 
         return redirect()->route('logged_index');
         
@@ -148,8 +149,7 @@ class EventController extends Controller
 
             $event=Event::findOrFail($id);
             Storage::delete('public/'.$event->image);
-            $newEvent['image']=$request->file('image')->store('img', 'public');
-
+            $changesEvent['image']=$request->file('image')->store('img', 'public');
 
             }
 
@@ -157,7 +157,7 @@ class EventController extends Controller
         Event::where('id', '=', $id)->update($changesEvent);
        
 
-        //$event = Event::findOrFail($id);
+        $event = Event::findOrFail($id);
         return redirect()->route('logged_index');
         //return view('dashboard', compact('event'));
     }

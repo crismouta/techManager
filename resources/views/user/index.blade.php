@@ -12,6 +12,17 @@
             <em>{{ __('Lore')}}meets</em>&nbsp;&nbsp;{{('Tech Events') }}
         </h2>
         </x-slot>
+
+        <!-- flash message -->
+        <div class="flex justify-center pt-8">
+            @if (session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+            @endif
+        </div>
+
+
         <!-- component -->
         <head>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -378,7 +389,7 @@
                 </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                {{$event->date}}
+                {{date('d/m/Y', strtotime($event->date))}}
               </td>
               <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
