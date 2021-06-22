@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 
 
 class EventController extends Controller
@@ -111,7 +112,15 @@ class EventController extends Controller
         $clickedEventId = Event::find($id);
 
         $loggedUserId->events()->attach($clickedEventId);
-        
+
+        Mail::raw('You have been successfully registered to our event "'.$clickedEventId->title.'".', function ($m) {
+            $m->from('from@example.com', 'Lorem Meets');
+
+            $m->to(User::find(Auth::id())->email, User::find(Auth::id())->name)->subject('You have a new notification');
+
+        });
+
+       // dd(User::find(Auth::id())->email);
         session()->flash('message', 'Your application has been successfully submitted!');
 
         return redirect()->route('logged_index');

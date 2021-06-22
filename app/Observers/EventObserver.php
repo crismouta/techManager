@@ -16,7 +16,7 @@ class EventObserver
     public function created(Event $event)
     {   
 
-        Mail::raw('The new event "'.$event->id.'" has been successfully created!', function ($m) {
+        Mail::raw('The new event "'.$event->title.'" has been successfully created!', function ($m) {
             $m->from('from@example.com', 'Lorem Meets');
 
             $m->to('jmasllorens@gmail.com', 'Jael Masllorens')->subject('You have a new notification');
