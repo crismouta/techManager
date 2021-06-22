@@ -199,7 +199,7 @@
         $("#sButton1").addClass("bg-green-400");
 
 
-        loopSlider();
+        
 
 
 
