@@ -199,7 +199,7 @@
         $("#sButton1").addClass("bg-green-400");
 
 
-        
+        // loopSlider();
 
 
 
@@ -215,9 +215,13 @@
         <body>
         <div class="sliderAx h-auto pt-4">
 
+        <?php $counter = 0; ?>
         @foreach($events as $event)
+       
         @if($event->isFavorite)
-        <div id='slider-{{$event->id}}' class='container mx-auto'>
+        
+        <?php $counter++; ?>
+        <div id='slider-{{$counter}}' class='container mx-auto'>
         <div class='bg-cover bg-top  h-auto text-white py-24 px-10 object-fill' style='background-image: url({{asset('storage').'/'.$event->image}}); background-position: center;'>
 
         <p class='font-bold text-sm uppercase'>TedTalk</p>
@@ -228,7 +232,11 @@
         </div> 
         <br>
         </div>
+
         @endif
+        
+        
+        
         @endforeach
         
 
@@ -237,9 +245,11 @@
         </div>
         <div  class="flex justify-center w-12 mx-auto pb-2">
             <div class="flex">
+                <?php $counterButton = 0; ?>
                 @foreach($events as $event)
                 @if($event->isFavorite)
-                <button id="sButton{{$event->id}}" onclick="sliderButton{{$event->id}}()" class="bg-green-300 rounded-full w-4 p-2 " ></button>
+                <?php $counterButton++; ?>
+                <button id="sButton{{$counterButton}}" onclick="sliderButton{{$counterButton}}()" class="bg-green-300 rounded-full w-4 p-2 " ></button>
                 @endif
                 @endforeach
             </div>
