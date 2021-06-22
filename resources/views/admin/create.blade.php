@@ -41,6 +41,17 @@
                             </div>
                             </div>
 
+                                <div class="grid grid-cols-1 mt-5 mx-7">
+                                    <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Type of event</label>
+                                    
+                                    <input type="radio" name="isFavorite" value="1">
+                                    <span>Favorite</span>
+
+                                    <input type="radio" name="isFavorite" value="0">
+                                    <span>Not Favorite</span>
+
+                                </div>
+
                             <div class="grid grid-cols-1 mt-5 mx-7">
                             <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Type of event</label>
                             <select class="py-2 px-3 rounded-lg border-2 border-green-400 mt-1 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
