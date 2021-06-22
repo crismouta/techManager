@@ -111,11 +111,11 @@ class EventController extends Controller
         $clickedEventId = Event::find($id);
 
         $loggedUserId->events()->attach($clickedEventId);
-        //Event::create([$id, $loggedUserId]);
-       //Event::create([$clickedEventId, $id]);
         
+        session()->flash('message', 'Your application has been successfully submitted!');
 
         return redirect()->route('logged_index');
+        
         
     }
 
