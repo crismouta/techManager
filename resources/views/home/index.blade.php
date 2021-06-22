@@ -223,7 +223,7 @@
         <div class="sliderAx h-auto pt-4">
         @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                     @auth
+                    @auth
 
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
@@ -362,10 +362,10 @@
                 <a href="{{url('/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
                 <img class="h-16 w-32" src="{{ asset('storage').'/'.$event->image}}" alt="">
                 </a>
-                  </div>
-                  <div class="ml-4">
-                  <a href="{{url('/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
-                  </div>
+                    </div>
+                    <div class="ml-4">
+                    <a href="{{url('/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
+                    </div>
                 </div>
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">
@@ -377,13 +377,13 @@
                 </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                {{$event->date}}
-              </td>
-              <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
+                {{ date('d/m/Y', strtotime($event->date))}}
+                </td>
+                <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
-                <a href="{{url('/user/editUser/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
+                <a href="{{ route('login') }}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
 
-              </td>
+                </td>
 
 
             </tr>
