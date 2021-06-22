@@ -111,6 +111,8 @@ class EventController extends Controller
         $clickedEventId = Event::find($id);
 
         $loggedUserId->events()->attach($clickedEventId);
+        //Event::create([$id, $loggedUserId]);
+       //Event::create([$clickedEventId, $id]);
         
 
         return redirect()->route('logged_index');

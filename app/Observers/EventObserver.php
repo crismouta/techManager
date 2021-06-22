@@ -15,8 +15,17 @@ class EventObserver
      */
     public function created(Event $event)
     {   
-        
-        Mail::raw('The new event "'.$event->title.'" has been successfully created!', function ($m) {
+
+        Mail::raw('The new event "'.$event->id.'" has been successfully created!', function ($m) {
+            $m->from('from@example.com', 'Lorem Meets');
+
+            $m->to('jmasllorens@gmail.com', 'Jael Masllorens')->subject('You have a new notification');
+
+        });
+
+       
+
+       /*  Mail::raw('The new event "'.$event->id.'" has been successfully created!', function ($m) {
             $m->from('promociones@gastronomus.net', 'Lorem Meets');
 
             $m->to('jmasllorens@gmail.com', 'Jael Masllorens')->subject('You have a new notification');
@@ -25,7 +34,19 @@ class EventObserver
 
         });
 
-        dd('The new event "'.$event->title.'" has been successfully created!');
+        dd('The new event "'.$event->i.'" has been successfully created!'); */
+        
+        /* Mail::raw('The new event "'.$event->id.'" has been successfully created!', function ($m) {
+            $m->from('promociones@gastronomus.net', 'Lorem Meets');
+
+            $m->to('jmasllorens@gmail.com', 'Jael Masllorens')->subject('You have a new notification');
+
+            //$m->to('recorda@gmail.com', 'Joan Recordà')->subject('You have a new notification');
+
+        });
+
+        dd('The new event "'.$event->i.'" has been successfully created!'); */
+        
          
      
         /* Mail::send('logged_index', ['event' => $event], function ($m) use ($event) {

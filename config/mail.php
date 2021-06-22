@@ -38,11 +38,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => 'smtp.dondominio.com',
-            'port' => 587,
+            'host' => 'smtp.mailtrap.io',
+            'port' => 25,
             'encryption' => 'tls',
-            'username' => 'promociones@gastronomus.net',
-            'password' => 'Pr0m0s2021+',
+            'username' => 'a16352c1af9bce',
+            'password' => 'f555b4cac079b7',
             'timeout' => null,
             'auth_mode' => null,
         ],
