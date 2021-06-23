@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 
 class EventController extends Controller
@@ -25,7 +26,7 @@ class EventController extends Controller
      */
     public function index()
     {
-
+        
     $events = Event::paginate(5);
 
     if(Auth::user()->isAdmin){

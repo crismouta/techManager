@@ -245,10 +245,10 @@
         </div>
         <div  class="flex justify-center w-12 mx-auto pb-2">
             <div class="flex">
-                <?php $counterButton = 0; ?>
+                <?php $counterButton = 0 ; ?>
                 @foreach($events as $event)
                 @if($event->isFavorite)
-                <?php $counterButton++; ?>
+                <?php ++$counterButton; ?>
                 <button id="sButton{{$counterButton}}" onclick="sliderButton{{$counterButton}}()" class="bg-green-300 rounded-full w-4 p-2 " ></button>
                 @endif
                 @endforeach
@@ -355,7 +355,7 @@
         </div>
 
         <div class="flex justify-center pt-8">
-            {{$events->links()}}
+            {{$events->appends(request()->except('page'))->links()}}
         </div>
         </div>
         </x-app-layout>
