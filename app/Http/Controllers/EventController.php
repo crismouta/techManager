@@ -29,6 +29,7 @@ class EventController extends Controller
 
     $user = Auth::user();
 
+        
     $events = Event::paginate(5);
 
     if($user->isAdmin){
@@ -86,15 +87,16 @@ class EventController extends Controller
      */
     public function show($id)
     {
+        $user = Auth::user();
         $event = Event::find($id);
 
         if(Auth::user()->isAdmin){
 
-            return view('admin.show',  ["event" => $event]);
+            return view('admin.show',  ["event" => $event, "user" => $user]);
 
         }
 
-            return view('user.show', ["event" => $event]);
+            return view('user.show', ["event" => $event, "user" =>$user]);
 
     }
 
