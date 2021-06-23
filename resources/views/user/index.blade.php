@@ -395,7 +395,7 @@
                 @if($event->isSubscribed($user) === false)
                 <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
-                <a method ="GET" href="{{url('/join/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
+                <a method ="GET" href="{{url('/join/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join2</a>
 
                 </td>
                 @endif
