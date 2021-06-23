@@ -373,7 +373,7 @@
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">
                 <span class="px-4 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
-                    5 / {{$event->capacity}}
+                {{count($event->users)}} / {{$event->capacity}}
                 </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
