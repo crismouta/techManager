@@ -329,10 +329,10 @@
         </body>
         <div class="py-12">
         <div class="flex justify-end pb-8 max-w-7xl">
-        {{-- <a href="{{url('/user/createUser')}}">
-        <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">New event</button>
+        <a href="{{url('/user/myList')}}">
+        <button class="uppercase px-8 py-2 rounded bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg ">My events</button>
 
-        </a> --}}
+        </a>
         </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-2">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">

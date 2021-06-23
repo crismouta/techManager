@@ -45,7 +45,7 @@ Route::patch('/admin/edit/{id}', [EventController::class, 'update'])->name('upda
 
 Route::get('/user/show/{id}', [EventController::class, 'show'])->name('user');
 
-
+Route::get('/user/myList', [EventController::class, 'myList'])->name('myList');
 
 
 Route::get('/index',[EventController::class, 'index'])->name('logged_index');
