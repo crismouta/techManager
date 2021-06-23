@@ -218,7 +218,7 @@
         $("#sButton1").addClass("bg-green-400");
 
 
-        loopSlider();
+        // loopSlider();
 
 
 
@@ -233,94 +233,41 @@
 
         <body>
         <div class="sliderAx h-auto pt-4">
-        @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
+        <?php $counter = 0; ?>
+        @foreach($events as $event)
+       
+        @if($event->isFavorite)
+        
+        <?php $counter++; ?>
+        <div id='slider-{{$counter}}' class='container mx-auto'>
+        <div class='bg-cover bg-top  h-auto text-white py-24 px-10 object-fill' style='background-image: url({{asset('storage').'/'.$event->image}}); background-position: center;'>
 
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-        <div id="slider-1" class="container mx-auto">
-        <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://femtech2019.files.wordpress.com/2019/01/women-in-tech.jpg?w=1137); background-position: center;">
-
-        <p class="font-bold text-sm uppercase">TedTalk</p>
-        <p class="text-3xl font-bold">Women in technologys</p>
-        <p class="text-2xl mb-10 leading-none">A case for positive discrimination</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
-        <!-- ETIQUETA CON SHOW DE EVENTOS FALTA BIGOTITIOS   <a href="url ('/events/show/'.$event->id)" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Select</a> -->
-        </div> <!-- container -->
+        <p class='font-bold text-sm uppercase'>TedTalk</p>
+        <p class='text-3xl font-bold'>{{$event -> title}}</p>
+        <p class='text-2xl mb-10 leading-none'>{{$event -> description}}</p>
+        <a href='#' class='bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800'>Select</a>
+        
+        </div> 
         <br>
         </div>
 
-
-        <div id="slider-2" class="container mx-auto">
-        <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://i.ytimg.com/vi/KJ0u8z_8btw/maxresdefault.jpg); background-position: center;">
-
-        <p class="font-bold text-sm uppercase">Masterclass</p>
-        <p class="text-3xl font-bold">Agile mindset: nobody expects the Spanish inquisition</p>
-        <p class="text-2xl mb-10 leading-none">How to become friends with adversity</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
-
-        </div> <!-- container -->
-        <br>
-        </div>
-
-
-        <div id="slider-3" class="container mx-auto">
-        <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80); background-position: bottom;">
-
-        <p class="font-bold text-sm uppercase">Webinar</p>
-        <p class="text-3xl font-bold">Break into Web Development</p>
-        <p class="text-2xl mb-10 leading-none">How to get started as a web developer and build solid apps</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
-
-        </div> <!-- container -->
-        <br>
-        </div>
-
-
-
-        <div id="slider-4" class="container mx-auto">
-        <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)">
-        <div class="md:w-1/2">
-        <p class="font-bold text-sm uppercase">Workshop</p>
-        <p class="text-3xl font-bold">Laravel 8 for Begginers</p>
-        <p class="text-2xl mb-10 leading-none">Life is so CRUD(e)</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
-        </div>
-        </div> <!-- container -->
-        <br>
-        </div>
-
-        <div id="slider-5" class="container mx-auto">
-        <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://elporteno.cl/wp-content/uploads/2020/07/Antonio-Gramsci.jpg)">
-        <div class="md:w-1/2">
-        <p class="font-bold text-sm uppercase">Aquelarre</p>
-        <p class="text-3xl font-bold">Populism: a defense</p>
-        <p class="text-2xl mb-10 leading-none">Why all politicians should be populists</p>
-        <a href="#" class="bg-green-400 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Join</a>
-        </div>
-        </div> <!-- container -->
-        <br>
-        </div>
-
-
+        @endif
+        
+        
+        
+        @endforeach
 
         </div>
+
         <div  class="flex justify-center w-12 mx-auto pb-2">
             <div class="flex">
-                <button id="sButton1" onclick="sliderButton1()" class="bg-green-300 rounded-full w-4 p-2 " ></button>
-                <button id="sButton2" onclick="sliderButton2() " class="bg-green-300 rounded-full w-4 p-2"></button>
-                <button id="sButton3" onclick="sliderButton3() " class="bg-green-300 rounded-full w-4 p-2"></button>
-                <button id="sButton4" onclick="sliderButton4() " class="bg-green-300 rounded-full w-4 p-2"></button>
-                <button id="sButton5" onclick="sliderButton5() " class="bg-green-300 rounded-full w-4 p-2"></button>
+                 <?php $counterButton = 0 ; ?>
+                @foreach($events as $event)
+                @if($event->isFavorite)
+                <?php ++$counterButton; ?>
+                <button id="sButton{{$counterButton}}" onclick="sliderButton{{$counterButton}}()" class="bg-green-300 rounded-full w-4 p-2 " ></button>
+                @endif
+                @endforeach
             </div>
         </div>
 
