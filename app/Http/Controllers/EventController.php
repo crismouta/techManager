@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 
 class EventController extends Controller
@@ -51,7 +51,8 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {   
+      
         return view('admin.create');
         // return view('events.createUser');
     }
@@ -70,11 +71,12 @@ class EventController extends Controller
         {
             $newEvent['image']=$request->file('image')->store('img', 'public');
         }
-        Event::insert($newEvent);
+        Event::create($newEvent);
+        //Event::insert($newEvent);
         //return response()->json($newEvent);
         $events = Event::paginate(40);
-
-        return redirect()->route('logged_index');
+        
+        //return redirect()->route('logged_index');
     }
 
     /**
@@ -116,10 +118,19 @@ class EventController extends Controller
 
         
         $loggedUserId->events()->attach($clickedEventId);
-        
+
+        Mail::raw('You have been successfully registered to our event "'.$clickedEventId->title.'".', function ($m) {
+            $m->from('loremmeets@loremmeets.com', 'Lorem Meets');
+
+            $m->to(User::find(Auth::id())->email, User::find(Auth::id())->name)->subject('You have a new notification');
+
+        });
+
+       // dd(User::find(Auth::id())->email);
         session()->flash('message', 'Your application has been successfully submitted!');
 
         return redirect()->route('logged_index');
+        
         
     }
 
@@ -179,6 +190,7 @@ class EventController extends Controller
 
 
         Event::where('id', '=', $id)->update($changesEvent);
+       
 
         $event = Event::findOrFail($id);
         return redirect()->route('logged_index');

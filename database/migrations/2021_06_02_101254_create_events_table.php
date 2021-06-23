@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->dateTime('date')->nullable();
             $table->boolean('isFavorite')->default(0);
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->string('description')->nullable();
             $table->string('image')->nullable();
             $table->integer('capacity')->nullable();
