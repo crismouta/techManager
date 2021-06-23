@@ -320,7 +320,7 @@
                 </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                {{date('d/m/Y', strtotime($event->date))}}
+                {{($event->date))}}
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
