@@ -120,7 +120,7 @@ class EventController extends Controller
         $loggedUserId->events()->attach($clickedEventId);
 
         Mail::raw('You have been successfully registered to our event "'.$clickedEventId->title.'".', function ($m) {
-            $m->from('from@example.com', 'Lorem Meets');
+            $m->from('loremmeets@loremmeets.com', 'Lorem Meets');
 
             $m->to(User::find(Auth::id())->email, User::find(Auth::id())->name)->subject('You have a new notification');
 
