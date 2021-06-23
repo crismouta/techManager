@@ -146,8 +146,13 @@ class EventController extends Controller
     }
 
     public function myList(){
+        $user = Auth::user();
+        $myList = Auth::user()->events;
+
 
         //buscar en la lista de los eventos aquellos id que coincidan con el id del evento del user loggeado.
+
+        return view('user.myList', ["myList" => $myList, "user" => $user]);
 
         
     }
