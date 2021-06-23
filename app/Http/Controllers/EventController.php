@@ -26,15 +26,17 @@ class EventController extends Controller
     public function index()
     {
 
+    $user = Auth::user();
+
     $events = Event::paginate(5);
 
-    if(Auth::user()->isAdmin){
+    if($user->isAdmin){
 
-        return view('admin.index', ['events' => $events]);
+        return view('admin.index', ['events' => $events, 'user' => $user]);
 
     }
     //dd($events);
-        return view('user.index', ['events' => $events]);
+        return view('user.index', ['events' => $events, 'user' => $user]);
 
     }
 
@@ -104,10 +106,12 @@ class EventController extends Controller
     public function join($id)
 
     {
+
         $loggedUserId = User::find(Auth::id());
     
         $clickedEventId = Event::find($id);
 
+        
         $loggedUserId->events()->attach($clickedEventId);
         
         session()->flash('message', 'Your application has been successfully submitted!');
@@ -115,6 +119,20 @@ class EventController extends Controller
         return redirect()->route('logged_index');
         
     }
+
+    public function unsubscribe($id)
+    {
+        $loggedUserId = User::find(Auth::id());
+    
+        $clickedEventId = Event::find($id);
+
+        $loggedUserId->events()->detach($clickedEventId);
+        
+
+        return redirect()->route('logged_index');
+    }
+
+    
 
     public function edit($id)
 

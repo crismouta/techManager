@@ -33,12 +33,17 @@ Route::delete('/admin/edit/{id}', [EventController::class, 'destroy'])->name('de
 
 //realmente esto es para el habilitar el join, no el edit
 // Route::get('events/editUser/{id}', [EventController::class, 'edit']);
-Route::get('join/{id}', [EventController::class, 'join']);
+Route::get('join/{id}', [EventController::class, 'join'])->name('join');
+
+Route::get('unsubscribe/{id}', [EventController::class, 'unsubscribe'])->name('unsubscribe');
+
 Route::get('/admin/edit/{id}', [EventController::class, 'edit'])->name('admin_edit')->middleware(IsAdmin::class);
 
 Route::delete('events/{id}', [EventController::class, 'destroy'])->name('destroy')->middleware(IsAdmin::class);
 
 Route::patch('/admin/edit/{id}', [EventController::class, 'update'])->name('update')->middleware(IsAdmin::class);
+
+Route::get('/user/show/{id}', [EventController::class, 'show'])->name('user');
 
 
 
