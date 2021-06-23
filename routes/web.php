@@ -56,3 +56,5 @@ Route::get('/index',[EventController::class, 'index'])->name('logged_index');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/show/{id}', [HomeController::class, 'show'])->name('show_home');
+
+

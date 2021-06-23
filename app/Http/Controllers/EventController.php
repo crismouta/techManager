@@ -158,9 +158,7 @@ class EventController extends Controller
 
     public function myList(){
 
-        //buscar en la lista de los eventos aquellos id que coincidan con el id del evento del user loggeado.
-
-        
+    
     }
 
     /**
