@@ -69,7 +69,7 @@
                     Author
                   </p>
                   <p class="text-xs font-light tracking-wider text-gray-600">
-                    08/12/2021
+                    {{date('d/m/Y h:i', strtotime($event->date))}}
                   </p>
                 </div>
               </div>
