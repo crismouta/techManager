@@ -39,12 +39,12 @@ composer install</li>
 <li>composer require laravel/breeze --dev</li>
 <li>php artisan breeze:install</li>
 <li>php artisan migrate</li>
-<li>php artisan serve</li>
-<li>php artisan test</li>
-<li>php artisan serve</li>
 </ol>
-
-  
+<h2>Running app</h2>
+<li>php artisan serve</li>
+ <h2>Running Tests</h2> 
+<li>php artisan test</li>
+<h3><a src="https://trello.com/b/8TD00JpR/tech-events-manager">Trello</a></h3>
 
 
 
