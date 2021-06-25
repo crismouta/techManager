@@ -40,8 +40,7 @@ composer install</li>
 <li>php artisan test</li>
 <li>php artisan serve</li>
 </ol>
-
-   <video src="/public/storage/img/bandicam 2021-06-23 15-21-13-956.mp4"></video>
+<img src="/public/storage/img/agile-mindset.jpg">
 
 
 
