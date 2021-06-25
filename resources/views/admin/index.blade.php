@@ -355,7 +355,7 @@
         </div>
 
         <div class="flex justify-center pt-8">
-            {{$events->appends(request()->except('page'))->links()}}
+            {{$events->links()}}
         </div>
         </div>
         </x-app-layout>
