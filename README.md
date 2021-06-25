@@ -44,7 +44,7 @@ composer install</li>
 <li>php artisan serve</li>
  <h2>Running Tests</h2> 
 <li>php artisan test</li>
-<h3><a src="https://trello.com/b/8TD00JpR/tech-events-manager">Trello</a></h3>
+<h3></h3><a href="https://trello.com/b/8TD00JpR/tech-events-manager">Trello</a></h3>
 
 
 
