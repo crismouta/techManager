@@ -1,6 +1,6 @@
 #  WELCOM    TO   TECHMANAGER 
 <h2>Team</h2><br>
-<a href="https://github.com/jmasllorens">Jael</a><br>
+<a href="https://github.com/jmasllorens">Jael</a>
 <a href="https://github.com/blaucomfuig">Sergio</a><br>
 <a href="https://github.com/thierno1492">Thierno</a><br>
 <a href="https://github.com/Francocalvino">Franco</a><br>
