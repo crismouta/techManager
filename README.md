@@ -18,7 +18,10 @@ Admin can check wich users are registered in a event;</li>
 <li>TDD</li>
 <li>Web page should be deployed.</li>
 
-
+<h3></h3>Technical Requirements</h3>
+<li>Laravel 8</li>
+<li>PHP 7.4</li>
+<li>composer 1.10.15</li>
 
 
 
@@ -41,7 +44,7 @@ composer install</li>
 <li>php artisan serve</li>
 </ol>
 
-   <img src="/public/storage/img/agile-mindset.jpg">
+  
 
 
 
