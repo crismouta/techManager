@@ -50,7 +50,7 @@
                 Author
               </p>
               <p class="text-xs font-light tracking-wider text-gray-600">
-                {{date('d/m/Y h:i', strtotime($event->date))}}
+                {{date('d/m/Y h:i A', strtotime($event->date))}}
               </p>
             </div>
           </div>

@@ -357,35 +357,46 @@
             <tbody class="bg-white divide-y divide-gray-200">
             <tr>@foreach ($events as $event)
                 <td class="px-6 py-4 whitespace-wrap w-92">
-                <div class="flex items-center w-92">
-                <div class="flex-shrink-0 h-16 w-32">
-                <a href="{{url('/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
-                <img class="h-16 w-32" src="{{ asset('storage').'/'.$event->image}}" alt="">
-                </a>
+                    <div class="flex items-center w-92">
+                        <div class="flex-shrink-0 h-16 w-32">
+                            <a href="{{url('/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">
+                            <img class="h-16 w-32" src="{{ asset('storage').'/'.$event->image}}" alt="">
+                            </a>
+                        </div>
+                        <div class="ml-4">
+                            <a href="{{url('/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
+                        </div>
                     </div>
-                    <div class="ml-4">
-                    <a href="{{url('/show/'.$event->id)}}" class="text-gray-600 hover:text-gray-900">{{$event->title}}</a>
-                    </div>
-                </div>
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-500">{{$event->description}}</div>
+                    <div class="text-sm text-gray-500">{{$event->description}}</div>
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">
-                <span class="px-4 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
-                {{count($event->users)}} / {{$event->capacity}}
-                </span>
+                    <span class="px-4 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
+                        {{count($event->users)}} / {{$event->capacity}}
+                    </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                {{ date('d/m/Y', strtotime($event->date))}}
+                        {{date('d/m/Y h:i A', strtotime($event->date))}}
                 </td>
+
+                @if($event->date > now())
                 <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
-                <a href="{{ route('login') }}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
+                
+                    <a href="{{ route('login') }}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
 
                 </td>
+                @endif
 
+                @if($event->date < now())
+                <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
+                    <a method ="GET" href="{{url('/unsubscribe/'.$event->id)}}" class="border border-red-500 text-red-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-red-600 focus:outline-none focus:shadow-outline">Expired</a>
+
+                </td>
+                @endif
+                
             </tr>
 
             </tbody>

@@ -9,7 +9,7 @@ class HomeController extends Controller {
 
     public function index() {
 
-        $events = Event::paginate(5);
+        $events = Event::orderBy('date', 'asc')->paginate(5);
 
         return view('home.index', ['events' => $events]);
 
