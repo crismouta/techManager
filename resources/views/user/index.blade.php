@@ -301,17 +301,17 @@
                                             <th scope="col" class="relative px-6 py-3">
                                                 <span class="sr-only"></span>
                                             </th>
-                                            
+
                                         </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
-                                    @foreach ($events->sortBy('date') as $event)
+                                        @foreach ($events->sortBy('date') as $event)
                                         <tr>
 
-                                           
+
                                             @if($event->date>now())
-                                           
-                                         
+
+
                                             <td class="px-6 py-4 whitespace-wrap w-92">
                                                 <div class="flex items-center w-92">
                                                     <div class="flex-shrink-0 h-16 w-32">
@@ -328,9 +328,16 @@
                                                 <div class="text-sm text-gray-500">{{$event->description}}</div>
                                             </td>
                                             <td class="px-4 py-4 whitespace-nowrap">
-                                                <span class="px-4 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
-                                                    {{count($event->users)}} / {{$event->capacity}}
+                                                @if(count($event->users) >= $event->capacity)
+                                                <span class="px-4 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-400">
+                                                    Full
                                                 </span>
+                                                @endif
+                                                @if(count($event->users) < $event->capacity)
+                                                    <span class="px-4 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
+                                                        {{count($event->users)}} / {{$event->capacity}}
+                                                    </span>
+                                                @endif
                                             </td>
                                             <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
                                                 {{date('d/m/Y h:i A', strtotime($event->date))}}
@@ -344,13 +351,7 @@
                                                 </td>
                                                 @endif
 
-                                                @if($event->isSubscribed($user) === false && count($event->users) >= $event->capacity && $event->date > now())
-                                                <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
-
-                                                    <a method="GET" href="{{url('/unsubscribe/'.$event->id)}}" class="border border-red-500 text-red-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-red-600 focus:outline-none focus:shadow-outline">Full</a>
-
-                                                </td>
-                                                @endif
+                                                
 
                                                 @if($event->isSubscribed($user) === true && $event->date > now())
                                                 <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
@@ -360,8 +361,9 @@
                                                 </td>
                                                 @endif
                                                 @endif
-                                            @endforeach
-                                            @foreach($events as $event)
+                                                @endforeach
+                                                
+                                                @foreach($events as $event)
                                                 @if($event->date < now()) <td class="px-6 py-4 whitespace-wrap w-92 bg-gray-100">
                                                     <div class="flex items-center w-92">
                                                         <div class="flex-shrink-0 h-16 w-32">
@@ -395,7 +397,7 @@
                                         </tr>
                                         @endforeach
                                     </tbody>
-                                
+
 
                                 </table>
 
