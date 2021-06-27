@@ -9,6 +9,20 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             <em>{{ __('Lore')}}meets</em>&nbsp;&nbsp;{{('Tech Events') }}
         </h2>
+        @if (Route::has('login'))
+            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                @auth
+
+                @else
+                <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                @endif
+                @endauth
+            </div>
+        
+            @endif
     </x-slot>
     <!-- component -->
 
@@ -215,19 +229,8 @@
 
     <body>
         <div class="sliderAx h-auto pt-4">
-            @if (Route::has('login'))
-            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                @auth
-
-                @else
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                @endif
-                @endauth
-            </div>
-            @endif
+           
+      
 
             <?php $counter = 0; ?>
             @foreach($events as $event)
