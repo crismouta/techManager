@@ -10,7 +10,7 @@
             <em>{{ __('Lore')}}meets</em>&nbsp;&nbsp;{{('Tech Events') }}
         </h2>
         @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+        <div class="hidden absolute top-0 right-0 px-6 py-4 sm:block">
             @auth
 
             @else
