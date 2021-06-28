@@ -29,8 +29,8 @@ class EventController extends Controller
 
     $user = Auth::user();
 
-        
-    $events = Event::paginate(5);
+    $events = Event::orderBy('date', 'desc')->paginate(10);
+
 
     if($user->isAdmin){
 
@@ -52,7 +52,6 @@ class EventController extends Controller
      */
     public function create()
     {   
-      
         return view('admin.create');
         // return view('events.createUser');
     }

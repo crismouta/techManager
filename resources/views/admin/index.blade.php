@@ -316,11 +316,11 @@
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                 <span class="px-2 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800">
-                {{count($event->users)}} / {{$event->capacity}}
+                    {{count($event->users)}} / {{$event->capacity}}
                 </span>
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                {{$event->date}}
+                    {{date('d/m/Y h:i A', strtotime($event->date))}}
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-right text-sm font-medium">
 
@@ -355,7 +355,7 @@
         </div>
 
         <div class="flex justify-center pt-8">
-            {{$events->appends(request()->except('page'))->links()}}
+            {{$events->links()}}
         </div>
         </div>
         </x-app-layout>

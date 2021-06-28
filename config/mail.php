@@ -39,7 +39,7 @@ return [
         'smtp' => [
             'transport' => 'smtp',
             'host' => 'smtp.mailtrap.io',
-            'port' => 25,
+            'port' => 465,
             'encryption' => 'tls',
             'username' => 'cc777fa9e27460',
             'password' => 'f0bdfb126c2a50',
