@@ -298,7 +298,7 @@
             </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
-            <tr>@foreach ($events as $event)
+            <tr>@foreach ($events->sortBy('date') as $event)
                 <td class="px-6 py-4 whitespace-wrap w-84">
                 <div class="flex items-center w-84">
                 <div class="flex-shrink-0 h-20 w-40">

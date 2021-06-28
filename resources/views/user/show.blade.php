@@ -26,9 +26,18 @@
                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>-->
-          <p class="text-green-500 font-semibold text-xs">
-            {{count($event->users)}} / {{$event->capacity}}
-          </p>
+          
+              @if(count($event->users) >= $event->capacity)
+                <p class="text-red-500 font-semibold text-xs">
+                  Full
+                </p>
+              @endif
+              @if(count($event->users) < $event->capacity)
+                <p class="text-green-500 font-semibold text-xs">
+                  {{count($event->users)}} / {{$event->capacity}}
+                </p>
+              @endif
+          
         </span>
       </div>
       <div class="py-2 px-4">
@@ -54,15 +63,16 @@
               </p>
             </div>
           </div>
-          <div class="flex items-center flex-shrink-0 px-2">
 
-            @if($event->isSubscribed($user)===false)
+          @if($event->isSubscribed($user)===false && count($event->users) < $event->capacity)
+          <div class="flex items-center flex-shrink-0 px-2">
+            
             <div class="flex items-center space-x-1 text-gray-400">
               <a href="{{url('/join/'.$event->id)}}" class="border border-green-500 text-green-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline">Join</a>
             </div>
             @endif
 
-            @if($event->isSubscribed($user)===true)
+            @if($event->isSubscribed($user)===true && count($event->users) < $event->capacity)
             <div class="flex items-center space-x-1 text-gray-400">
               <a href="{{url('/unsubscribe/'.$event->id)}}" class="border border-red-500 text-red-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-red-600 focus:outline-none focus:shadow-outline">Cancel</a>
             </div>
