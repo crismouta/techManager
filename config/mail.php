@@ -1,5 +1,7 @@
 <?php
 
+
+
 return [
 
     /*
@@ -36,11 +38,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'host' => 'smtp.mailtrap.io',
+            'port' => 465,
+            'encryption' => 'tls',
+            'username' => 'cc777fa9e27460',
+            'password' => 'f0bdfb126c2a50',
             'timeout' => null,
             'auth_mode' => null,
         ],

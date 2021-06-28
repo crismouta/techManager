@@ -23,6 +23,12 @@ class EventFactory extends Factory
     {
         return [
             'title' => $this->faker->company(),
+            'description' => $this->faker->name(),
+            'image' => $this->faker->imageurl(640,480, null, false),  
+            'capacity' => $this -> faker -> numberBetween($min = 5, $max = 30),
+            'date' => $this -> faker -> dateTimeBetween('now', '+100 days'),
+            
+
         ];
     }
 }
