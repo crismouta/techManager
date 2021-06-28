@@ -1,4 +1,4 @@
-#  WELCOM    TO   TECHMANAGER 
+#  WELCOME    TO   TECHMANAGER 
 <h2>Team</h2>
 <a href="https://github.com/jmasllorens">Jael</a><br>
 <a href="https://github.com/blaucomfuig">Sergio</a><br>
@@ -10,11 +10,11 @@
 <li>Web page for events management;</li>
 <li>Homepage with events highlighted section;</li>
 <li>Only register users can sign-up for the events;</li>
-<li>Register users also can cancel the attendance;</li>
-<li>Notifity users via email when they register in an event;</li>
-<li>Only Admin Users can create, delete, update and change  ones;</li>
+<li>Registered users can also cancel their attendance;</li>
+<li>Notify users via email when they register in an event;</li>
+<li>Only Admin Users can create, delete, update and change events;</li>
 <li>
-Admin can check wich users are registered in a event;</li>
+Admin can check which users are registered in an event;</li>
 <li>TDD</li>
 <li>Web page should be deployed.</li>
 
