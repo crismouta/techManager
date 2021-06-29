@@ -11,4 +11,13 @@ class EventController extends Controller
     public function index(){
         return response()->json(Event::all(), 200);
     }
+
+    public function subscribed($id){
+
+        $event = Event::findOrFail($id);
+        $subscribers = $event->users;
+
+        
+        return response()->json($subscribers, 200);
+    }
 }

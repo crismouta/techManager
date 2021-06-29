@@ -3,6 +3,7 @@
 namespace Tests\Feature\Api;
 
 use App\Models\Event;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -25,7 +26,22 @@ class ListUsersEventTest extends TestCase
                  ->assertJsonCount(2);
     }
 
-    //crear un evento, dos usuarios
-    //asignar los usuarios a evento
-    //comprobar que en la ruta del evento figure el id del evento inscrito
+    public function test_CheckIfSuscribedUsersAreListedInEvent()
+    {   
+        $users = User::factory(2)->create();
+        $event = Event::factory()->create();
+
+      
+
+        $event->users()->attach($users);
+
+        $response = $this->get('/api/events/1/subscribed');
+
+        $response->assertStatus(200)
+                 ->assertJsonCount(2);
+
+       
+    }
+
+    
 }
