@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Event;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -19,5 +20,14 @@ class EventController extends Controller
 
         
         return response()->json($subscribers, 200);
+    }
+
+    public function image($id){
+        $event = Event::find($id);
+        $image = \Storage::disk('public')->url($event->image);
+
+       
+
+        return response()->json($image, 200);
     }
 }
