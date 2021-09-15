@@ -1,4 +1,19 @@
-#  WELCOME    TO   TECHMANAGER 
+#  WELCOME    TO   LOREM Meets 
+
+![home](https://user-images.githubusercontent.com/82060703/133489761-9667e966-109a-4a60-92ee-6742676ce674.png)
+
+![admin](https://user-images.githubusercontent.com/82060703/133489836-7c43c3a7-cd5c-493f-90c9-7bbebb711494.png)
+
+![show](https://user-images.githubusercontent.com/82060703/133489856-76ae7f31-a7a7-4274-afb6-be478748e53d.png)
+
+<h2>App features</h2>
+
+<p>LOREM Meets is an applicación for technology events, where we can see a list of future and past events, also see detail information about an especific event. User ca create an account and resgister.
+ 
+ Registered users  can subscribe for future events and unsubscribe of events that they are already subscribed. 
+ 
+ Administrators can create, edit and delete events (CRUD), including add new images and change it.</p>
+
 <h2>Team</h2>
 <a href="https://github.com/jmasllorens">Jael</a><br>
 <a href="https://github.com/blaucomfuig">Sergio</a><br>
@@ -6,6 +21,7 @@
 <a href="https://github.com/Francocalvino">Franco</a><br>
 <a href="https://github.com/crismouta">Cris</a>
 <br><br>
+
 <h2>Project Requirements</h2>
 <li>Web page for events management;</li>
 <li>Homepage with events highlighted section;</li>
@@ -44,6 +60,21 @@ composer install</li>
 <li>php artisan serve</li>
  <h2>Running Tests</h2> 
 <li>php artisan test</li>
+
+<h2>Herramientas y tecnologías utilizadas</h2>
+
+- HTML5
+- CSS
+- Tailwindcss
+- PHP8
+- MySQL
+- Visual Studio Code
+- XAMPP
+- Laravel
+- Trello
+- Miro
+- Figma
+
 <h3></h3><a href="https://trello.com/b/8TD00JpR/tech-events-manager">Trello</a></h3>
 
 
